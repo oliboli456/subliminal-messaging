@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subliminal Messaging in Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js";</script>
+<style>
+/* Informational site: mission, definitions, mechanism, application, case study, ethics, references.
+   Question-style section headings, short sections, citations collected at the end.
+   Type: Inter throughout. Pure black ground, one accent per section. */
+:root{
+  --bg:#000; --panel:#101012; --panel2:#17171a;
+  --ink:#f5f5f7; --grey:#86868b; --faint:#5a5a5e;
+  --line:rgba(255,255,255,.12); --line-2:rgba(255,255,255,.26);
+  --blue:#5e9eff; --cyan:#40d6c8; --amber:#ffc94d; --orange:#ff7a3d; --pink:#ff5c9d;
+  --accent:var(--amber);
+  --f:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --e:cubic-bezier(.25,.1,.25,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-snap-type:y proximity;scroll-padding-top:78px}
+body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+button,input{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+::selection{background:var(--ink);color:#000}
+
+.nav{position:fixed;inset:0 0 auto 0;z-index:82;min-height:56px;background:rgba(0,0,0,.94);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:18px;padding:3px 20px 0;font-size:13px}
+.nav .brand{font-weight:600;letter-spacing:-.01em;white-space:nowrap;line-height:1.1;flex:0 0 auto;align-self:center}
+.nav .links{display:none;gap:19px;color:var(--grey);min-width:0;overflow:hidden;line-height:1.1;align-self:center;white-space:nowrap}
+.nav .links a{color:var(--grey);white-space:nowrap}
+.nav .links a:hover{color:var(--ink);text-decoration:none}
+.nav .links a{transition:color .35s var(--e);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:7px;text-decoration-thickness:1px}
+.nav .links a.on{color:var(--ink);text-decoration-color:var(--accent)}
+.nav .links a.on:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+@media(min-width:1120px){.nav .links{display:flex;align-items:center;position:absolute;left:50%;top:3px;bottom:0;transform:translateX(-50%);margin:0}}
+.nbtn{border:1px solid var(--line-2);border-radius:980px;padding:5px 13px;font-size:12px;line-height:1.3;color:var(--grey);transition:all .2s var(--e);white-space:nowrap;flex:0 0 auto;align-self:center}
+.nbtn:hover{border-color:var(--ink);color:var(--ink)}
+.nbtn[aria-pressed="true"]{background:var(--ink);color:#000;border-color:var(--ink)}
+.nav .bartrack{position:absolute;left:0;right:0;top:0;height:3px;background:rgba(255,255,255,.08)}
+.nav .bar{position:absolute;left:0;top:0;height:3px;background:var(--accent);width:0;transition:background .6s var(--e)}
+.black{position:fixed;inset:0;background:#000;z-index:200;opacity:0;pointer-events:none;transition:opacity .25s var(--e);display:grid;place-items:center}
+.black.on{opacity:1;pointer-events:auto}
+.black span{font-size:12px;color:#2a2a2e}
+
+.sec{position:relative;padding:118px 22px 112px;scroll-snap-align:start}
+.w{max-width:980px;margin:0 auto}
+.w.wide{max-width:1180px}
+.center{text-align:center}
+.center p{margin-left:auto;margin-right:auto}
+.page{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.02em;margin-bottom:14px;text-transform:uppercase}
+h1{font-size:clamp(40px,6.6vw,86px);font-weight:700;letter-spacing:-.03em;line-height:1.02;text-wrap:balance}
+h2{font-size:clamp(30px,4.4vw,56px);font-weight:600;letter-spacing:-.022em;line-height:1.1;text-wrap:balance}
+h3{font-size:clamp(21px,2.4vw,28px);font-weight:600;letter-spacing:-.016em;line-height:1.2}
+p{color:var(--grey);max-width:620px;font-size:clamp(15.5px,1.5vw,17.5px);line-height:1.62}
+p.big{font-size:clamp(20px,2.5vw,29px);line-height:1.34;color:var(--ink);max-width:660px;letter-spacing:-.012em;font-weight:500}
+p+p{margin-top:16px}
+.lede{margin-top:20px}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:normal;color:var(--accent)}
+sup a{color:var(--accent);font-size:.62em;font-weight:600;vertical-align:super;padding-left:1px}
+.fine{font-size:12px;color:var(--faint);line-height:1.6;max-width:720px}
+
+/* a block of the student's own writing */
+.mine{border-left:2px solid var(--accent);padding-left:22px;margin-top:26px;max-width:680px}
+.mine p{color:var(--ink);font-size:clamp(16px,1.7vw,19px)}
+.mine .who{font-size:12px;font-weight:600;color:var(--accent);margin-bottom:9px;text-transform:uppercase;letter-spacing:.02em}
+
+.a-blue{--accent:var(--blue)} .a-cyan{--accent:var(--cyan)} .a-amber{--accent:var(--amber)}
+.a-orange{--accent:var(--orange)} .a-pink{--accent:var(--pink)} .a-grey{--accent:var(--grey)}
+
+html.js .rv{opacity:0;transform:translateY(30px);transition:opacity 1s var(--e),transform 1s var(--e)}
+html.js .rv.in{opacity:1;transform:none}
+html.js .rv.d1{transition-delay:.1s} html.js .rv.d2{transition-delay:.2s}
+html.js .rv.d3{transition-delay:.3s} html.js .rv.d4{transition-delay:.4s}
+
+#hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:96px 22px 80px;overflow:hidden;text-align:center}
+#heroCv{position:absolute;inset:0;width:100%;height:100%}
+#hero .w{position:relative;pointer-events:none}
+#hero .kick{font-size:clamp(15px,1.8vw,19px);font-weight:600;color:var(--grey);margin-bottom:16px;letter-spacing:.01em;text-transform:uppercase}
+#hero p{margin:28px auto 0;max-width:620px;font-size:clamp(17px,1.9vw,21px);color:var(--grey)}
+.cue{margin-top:44px;font-size:12px;color:var(--faint);display:flex;flex-direction:column;align-items:center;gap:8px}
+.cue i{width:1px;height:30px;background:linear-gradient(var(--grey),transparent);animation:fall 2s var(--e) infinite}
+@keyframes fall{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* mission + questions */
+.qlist{display:grid;gap:0;margin-top:34px;border-top:1px solid var(--line)}
+.qlist li{list-style:none;display:grid;grid-template-columns:44px 1fr;gap:14px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline;text-align:left}
+.qlist li b{font-size:13px;font-weight:600;color:var(--accent)}
+.qlist li .t{font-size:clamp(17px,1.9vw,21px);font-weight:500;color:var(--ink);letter-spacing:-.01em;line-height:1.35}
+.qlist li .s{font-size:13px;color:var(--faint);margin-top:5px}
+
+.hl{display:grid;gap:14px;margin-top:46px}
+@media(min-width:680px){.hl{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.hl{grid-template-columns:repeat(3,1fr)}}
+.hl .card{background:var(--panel);border-radius:18px;padding:28px 26px;display:grid;gap:9px;align-content:start;min-height:180px;text-align:left}
+.hl .card b{font-size:13px;font-weight:600;color:var(--accent)}
+.hl .card .t{font-size:clamp(19px,2vw,23px);font-weight:600;letter-spacing:-.015em;line-height:1.22}
+.hl .card p{font-size:15px;max-width:none}
+
+.nums{display:grid;gap:36px;margin-top:50px;text-align:center}
+@media(min-width:720px){.nums{grid-template-columns:repeat(4,1fr);gap:24px}}
+.nums div .n{font-size:clamp(40px,5.4vw,68px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--accent)}
+.nums div .l{font-size:15px;font-weight:600;margin-top:10px;letter-spacing:-.01em}
+.nums div .s{font-size:13px;color:var(--grey);margin-top:3px}
+
+.model{position:relative;background:var(--panel);border-radius:20px;overflow:hidden;margin-top:44px;text-align:left}
+.model .mstage{position:relative;display:block}
+.model canvas{display:block;width:100%;height:min(48svh,410px);min-height:260px}
+.model .mhead{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:16px 18px;pointer-events:none}
+.model .mtag{min-width:0;flex:0 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;color:var(--grey);font-weight:500;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);padding:5px 11px;border-radius:980px}
+.model .mread{flex:0 0 auto;white-space:nowrap;font-size:12.5px;color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);padding:5px 11px;border-radius:980px}
+.model .mkey{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;display:flex;gap:8px;font-size:11.5px;color:var(--grey);pointer-events:none;flex-wrap:wrap}
+.model .mkey span{display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);padding:4px 10px;border-radius:980px;white-space:nowrap}
+.model .mkey i{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+.model .mfoot{border-top:1px solid var(--line);padding:20px 24px;display:grid;gap:10px;position:relative;z-index:3;background:var(--panel)}
+.model .mlab{font-size:13px;color:var(--grey);display:flex;justify-content:space-between;gap:12px;font-weight:500}
+.model .mlab b{color:var(--ink);font-weight:600}
+.model .mcap{font-size:13.5px;color:var(--grey);line-height:1.55;max-width:none}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:24px;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:4px;background:rgba(255,255,255,.18);border-radius:4px}
+input[type=range]::-moz-range-track{height:4px;background:rgba(255,255,255,.18);border-radius:4px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#fff;margin-top:-8px;border:0;box-shadow:0 1px 5px rgba(0,0,0,.6)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:0}
+
+.pin{padding:0}
+.pin .inner{max-width:1180px;margin:0 auto;padding:0 22px}
+@media(min-width:980px){.pin .inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}}
+.pin-vis{position:sticky;top:62px;height:calc(100svh - 62px);display:flex;align-items:center}
+.pin-vis .model{margin:0;width:100%}
+@media(max-width:979px){.pin-vis{height:auto;top:62px;background:#000;padding:12px 0 14px;z-index:5}.pin-vis .model canvas{height:36svh}}
+.pin-step{min-height:86svh;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:30px 0;transition:opacity .55s var(--e);scroll-snap-align:center}
+@media(max-width:979px){.pin-step{min-height:58svh;scroll-snap-align:none}}
+html.js .pin-step{opacity:.25} html.js .pin-step.active{opacity:1}
+.pin-step .k{font-size:13px;font-weight:600;color:var(--accent)}
+.pin-step .t{font-size:clamp(26px,3.3vw,42px);font-weight:600;letter-spacing:-.02em;line-height:1.12;max-width:16ch}
+.pin-step p{font-size:17px;max-width:38ch}
+
+.quiz{background:var(--panel);border-radius:20px;padding:32px 28px;display:grid;gap:22px;margin-top:44px;text-align:left}
+.quiz .q{font-size:clamp(21px,2.5vw,30px);font-weight:600;letter-spacing:-.016em;line-height:1.2;max-width:24ch}
+.quiz .ch{display:grid;gap:10px}
+@media(min-width:720px){.quiz .ch.c2{grid-template-columns:1fr 1fr}.quiz .ch.c3{grid-template-columns:repeat(3,1fr)}}
+.quiz .ch button{border:1px solid var(--line-2);border-radius:12px;padding:16px 18px;font-size:15px;font-weight:500;text-align:left;transition:all .2s var(--e)}
+.quiz .ch button:hover:not(:disabled){background:#fff;color:#000;border-color:#fff}
+.quiz .ch button:disabled{cursor:default}
+.quiz .ch button.right{background:var(--accent);color:#000;border-color:var(--accent)}
+.quiz .ch button.wrong{border-color:var(--pink);color:var(--pink)}
+.quiz .out{min-height:5.4em;display:grid;gap:16px;justify-items:start;align-content:start}
+.quiz .out p{color:var(--ink);font-size:16px;max-width:none}
+.go{background:#fff;color:#000;border-radius:980px;padding:11px 22px;font-size:15px;font-weight:500;transition:opacity .2s}
+.go:hover{opacity:.82}
+.dots{display:flex;gap:6px}
+.dots i{height:3px;flex:1;background:rgba(255,255,255,.18);border-radius:3px;transition:background .3s}
+.dots i.on{background:var(--accent)}
+
+.pane{background:var(--panel);border-radius:20px;padding:26px;margin-top:44px;text-align:left}
+.stage{min-height:190px;background:#000;border-radius:14px;display:grid;place-items:center;font-size:clamp(28px,5.5vw,48px);font-weight:600;letter-spacing:-.02em;text-align:center;padding:18px;user-select:none}
+.stage small{font-size:14px;color:var(--grey);font-weight:400;letter-spacing:0;display:block;line-height:1.6}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pill{border:1px solid var(--line-2);border-radius:980px;padding:7px 15px;font-size:13px;color:var(--grey);transition:all .2s var(--e)}
+.pill:hover{border-color:var(--ink);color:var(--ink)}
+.pill[aria-pressed="true"]{background:#fff;color:#000;border-color:#fff}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.opts button{border:1px solid var(--line-2);border-radius:12px;padding:14px;font-size:15px;transition:all .2s var(--e)}
+.opts button:hover:not(:disabled){background:#fff;color:#000;border-color:#fff}
+.opts button:disabled{opacity:.3;pointer-events:none}
+.note{font-size:13.5px;color:var(--grey);min-height:3.4em;margin-top:14px;line-height:1.6}
+.adScreen{min-height:230px;background:#000;border-radius:14px;display:grid;place-items:center;position:relative;padding:20px;text-align:center}
+.adScreen .fw{font-size:clamp(26px,5vw,42px);font-weight:700;color:var(--orange);letter-spacing:.06em;opacity:0}
+.adScreen .gh{position:absolute;font-size:clamp(36px,7vw,62px);font-weight:700;color:rgba(245,245,247,.08);letter-spacing:-.03em;pointer-events:none}
+.adFoot{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:18px;font-size:13px;color:var(--grey)}
+
+.tacs{display:grid;gap:14px;margin-top:44px;text-align:left}
+@media(min-width:760px){.tacs{grid-template-columns:1fr 1fr}}
+@media(min-width:1080px){.tacs{grid-template-columns:repeat(3,1fr)}}
+.tac{background:var(--panel);border-radius:18px;padding:26px 24px;display:grid;gap:12px;align-content:start}
+.tac b{font-size:13px;font-weight:600;color:var(--accent)}
+.tac .see{font-size:15px;color:var(--grey);max-width:none}
+.tac .says{font-size:20px;font-weight:600;letter-spacing:-.014em;line-height:1.25;border-top:1px solid var(--line);padding-top:14px}
+.tac .cred{font-size:12px;color:var(--faint)}
+
+.links{display:grid;gap:42px;margin-top:48px;text-align:left}
+.link{display:grid;gap:12px;max-width:700px}
+.link .h{font-size:clamp(22px,2.7vw,32px);font-weight:600;letter-spacing:-.018em;line-height:1.18}
+.link.warn .h{color:var(--pink)}
+
+.oq{display:grid;gap:32px;margin-top:48px;text-align:left}
+.oq div{display:grid;gap:8px;max-width:680px}
+.oq b{font-size:13px;font-weight:600;color:var(--accent)}
+.oq .t{font-size:clamp(20px,2.2vw,26px);font-weight:600;letter-spacing:-.015em;line-height:1.2}
+
+.specs{margin-top:46px;border-top:1px solid var(--line);text-align:left}
+.specs .row{display:grid;gap:8px;padding:26px 0;border-bottom:1px solid var(--line)}
+@media(min-width:820px){.specs .row{grid-template-columns:230px 1fr;gap:40px}}
+.specs .k{font-size:15px;font-weight:600;color:var(--grey)}
+.specs .v{font-size:16px;color:var(--ink);line-height:1.6}
+.specs .v .u{display:block;color:var(--grey);font-size:14px;margin-top:7px}
+
+.fn{margin-top:38px;padding-top:26px;border-top:1px solid var(--line);display:grid;gap:11px;text-align:left}
+.fn li{list-style:none;font-size:12px;color:var(--faint);line-height:1.6;display:grid;grid-template-columns:22px 1fr;gap:4px}
+.fn li b{font-weight:600;color:var(--grey)}
+.fn li i{font-style:italic}
+
+.notes{position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(10,10,12,.97);backdrop-filter:blur(20px);border-top:1px solid var(--line-2);padding:18px 22px 22px;max-height:44vh;overflow:auto;transform:translateY(102%);transition:transform .4s var(--e)}
+.notes.open{transform:none}
+.notes .in{max-width:980px;margin:0 auto;display:grid;gap:12px}
+.notes .hd{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--faint);font-weight:600}
+.notes .hd h4{color:var(--amber);font-size:12px;font-weight:600}
+.notes ul{display:grid;gap:8px}
+.notes li{list-style:none;color:var(--ink);font-size:16px;padding-left:16px;position:relative;line-height:1.4}
+.notes li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:1px;background:var(--amber)}
+
+
+/* own brand: h4nsmade */
+.hb-stats{display:grid;gap:30px;margin-top:50px;text-align:center}
+@media(min-width:720px){.hb-stats{grid-template-columns:repeat(4,1fr);gap:20px}.hb-stats.three{grid-template-columns:repeat(3,1fr)}}
+.hb-num{font-size:clamp(38px,5vw,64px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.hb-lab{font-size:15px;font-weight:600;margin-top:10px;letter-spacing:-.01em}
+.hb-sub{font-size:13px;color:var(--grey);margin-top:3px}
+.hb-panel{background:var(--panel);border-radius:20px;margin-top:44px;text-align:left;overflow:hidden}
+.hb-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px;padding:18px 22px 4px;font-size:12.5px;color:var(--grey);font-weight:500}
+.hb-read{color:var(--grey);font-variant-numeric:tabular-nums;font-weight:500}
+.hb-read b{color:var(--accent);font-weight:600}
+.hb-svg{display:block;width:100%;touch-action:pan-y;cursor:crosshair}
+.hb-svg text{font-family:var(--f)}
+.hb-cap{border-top:1px solid var(--line);padding:16px 22px 18px;font-size:13.5px !important;color:var(--grey);line-height:1.55;max-width:none !important;margin:0 !important}
+.hb-rows{display:grid;gap:8px;padding:14px 22px 20px}
+.hb-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) 40px;gap:12px;align-items:center;font-size:12px;color:var(--faint)}
+.hb-row .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hb-row.key .nm{color:var(--ink)}
+.hb-row .tr{position:relative;height:6px;border-radius:3px;background:rgba(94,158,255,.3);overflow:hidden}
+.hb-row .st{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent);border-radius:3px;transition:width 1.1s var(--e)}
+.hb-row .pc{text-align:right;font-variant-numeric:tabular-nums;color:var(--grey)}
+.hb-row:hover .nm,.hb-row:hover .pc{color:var(--ink)}
+@media(max-width:620px){.hb-row{grid-template-columns:minmax(0,1fr) 40px;gap:4px 10px}.hb-row .nm{grid-column:1/-1}}
+.hb-key{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--grey)}
+.hb-key span{display:flex;align-items:center;gap:6px}
+.hb-key i{width:14px;height:4px;border-radius:2px}
+.hb-fu{display:grid;gap:22px;padding:22px 22px 24px}
+.fu{display:grid;gap:8px}
+.fu-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:14px;color:var(--grey)}
+.fu-top b{font-size:clamp(22px,2.6vw,30px);font-weight:600;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.fu-ln{height:2px;background:rgba(255,255,255,.08);border-radius:2px;position:relative}
+.fu-ln i{position:absolute;left:0;top:-1px;height:4px;border-radius:2px;width:0;background:var(--accent);transition:width 1.4s var(--e)}
+.fu-rt{font-size:12px;color:var(--faint)}
+.fu.hot .fu-rt{color:var(--accent)}
+.hb-drops{display:grid;gap:14px;margin-top:44px;text-align:left}
+@media(min-width:680px){.hb-drops{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1080px){.hb-drops{grid-template-columns:repeat(4,1fr)}}
+.hb-drop{background:var(--panel);border-radius:18px;padding:24px 22px 20px;display:grid;gap:8px;align-content:start}
+.hb-drop .wn{font-size:13px;font-weight:600;color:var(--grey)}
+.hb-drop .dn{font-size:clamp(52px,6.4vw,80px);font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.hb-drop.hot .dn,.hb-drop.hot .wn{color:var(--accent)}
+.hb-drop .wt{font-size:15px;color:var(--ink);font-weight:500}
+.hb-drop svg{width:100%;height:58px;display:block;margin-top:8px}
+.hb-drop .mt{font-size:12.5px;color:var(--grey);display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+
+/* ---- DRAFT MODE (temporary, remove before submitting) ---- */
+html.editing{scroll-snap-type:none}
+.edit-on #hero .w,.edit-on #hero .w *{pointer-events:auto}
+.edit-on [data-ed]{outline:1px dashed rgba(255,255,255,.2);outline-offset:7px;border-radius:3px}
+.edit-on [data-ed]:hover{outline-color:rgba(94,158,255,.55)}
+.edit-on [data-ed]:focus{outline:2px solid var(--blue);outline-offset:7px;background:rgba(94,158,255,.06)}
+.edit-on [data-ed].changed{outline:1px dashed rgba(255,201,77,.8)}
+.etool{position:fixed;right:16px;bottom:16px;z-index:120;display:none;gap:8px;align-items:center;flex-wrap:wrap;max-width:calc(100vw - 32px);background:rgba(16,16,20,.97);backdrop-filter:blur(18px);border:1px solid var(--line-2);border-radius:14px;padding:11px 13px;font-size:12.5px;box-shadow:0 12px 44px rgba(0,0,0,.65)}
+.edit-on .etool{display:flex}
+.etool .lbl{color:var(--grey)}
+.etool b{color:var(--amber);font-weight:600;font-variant-numeric:tabular-nums}
+.etool button{border:1px solid var(--line-2);border-radius:980px;padding:6px 13px;font-size:12px;color:var(--ink);transition:all .18s var(--e)}
+.etool button:hover{background:#fff;color:#000;border-color:#fff}
+.edump{position:fixed;inset:6% 6%;z-index:130;display:none;flex-direction:column;gap:12px;background:#0b0b0e;border:1px solid var(--line-2);border-radius:16px;padding:20px;box-shadow:0 20px 70px rgba(0,0,0,.8)}
+.edump.on{display:flex}
+.edump .eh{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;color:var(--grey)}
+.edump textarea{flex:1;width:100%;background:#000;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:15px;font:12.5px/1.65 ui-monospace,Menlo,Consolas,monospace;resize:none}
+.fbar{position:fixed;left:50%;top:66px;transform:translateX(-50%);z-index:121;display:none;align-items:center;max-width:calc(100vw - 24px);overflow-x:auto;background:rgba(16,16,20,.97);backdrop-filter:blur(18px);border:1px solid var(--line-2);border-radius:12px;padding:5px;font-size:13px;scrollbar-width:none}
+.fbar::-webkit-scrollbar{display:none}
+.edit-on .fbar{display:flex}
+.fbar .main{display:flex;align-items:center;gap:2px}
+.fbar button{flex:0 0 auto;min-width:34px;height:32px;padding:0 9px;border-radius:8px;color:var(--grey);transition:background .15s var(--e),color .15s var(--e);white-space:nowrap}
+.fbar button:hover{background:rgba(255,255,255,.08);color:var(--ink)}
+.fbar button[aria-pressed="true"]{background:#fff;color:#000}
+.fbar button:disabled{opacity:.3;pointer-events:none}
+.fbar .sep{width:1px;height:18px;background:var(--line-2);margin:0 4px;flex:0 0 auto}
+.fbar .lk{display:none;align-items:center;gap:6px;padding-left:4px}
+.fbar.linking .lk{display:flex}
+.fbar.linking .main{display:none}
+.fbar input{width:min(240px,50vw);height:30px;background:#000;border:1px solid var(--line-2);border-radius:8px;padding:0 10px;font-size:12.5px}
+main [data-ed] b,main [data-ed] strong{font-weight:600;color:var(--ink);font-size:inherit;letter-spacing:inherit;text-transform:inherit}
+main [data-ed] i{font-style:italic}
+main [data-ed] u{text-decoration:underline;text-underline-offset:3px}
+main [data-ed] s,main [data-ed] strike{text-decoration:line-through}
+
+@media(max-width:620px){
+  .sec{padding:82px 20px}
+  .nav .brand{font-size:12px}
+  .model canvas{height:34svh;min-height:230px}
+  .model .mtag,.model .mread{font-size:11px;padding:4px 9px}
+  .model .mkey span{font-size:10.5px;padding:3px 8px}
+  .qlist li{grid-template-columns:34px 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  html.js .rv{opacity:1;transform:none;transition:none}
+  html.js .pin-step{opacity:1}
+  .cue i{animation:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="brand">Subliminal Messaging</span>
+  <div class="links">
+    <a href="#p-what">What It Is</a>
+    <a href="#p-types">Types of Stimuli</a>
+    <a href="#p-who">How It Affects People</a>
+    <a href="#p-short">Short-Form</a>
+    <a href="#p-marketing">In Marketing</a>
+    <a href="#p-case">Case Study</a>
+    <a href="#p-brand">My Brand</a>
+    <a href="#p-ethics">Ethics &amp; Next Steps</a>
+    <a href="#p-refs">References</a>
+  </div>
+  <div class="bartrack"></div>
+  <div class="bar" id="bar"></div>
+</nav>
+<div class="black" id="black" aria-hidden="true"><span>press B to return</span></div>
+
+<main>
+
+<!-- HOME -->
+<section class="sec a-amber" id="hero" data-title="Home">
+  <canvas id="heroCv" aria-hidden="true"></canvas>
+  <div class="w">
+    <div class="kick rv">Oliver H. &nbsp;-&nbsp; Neuroscience Research Project</div>
+    <h1 class="rv d1">Subliminal Messaging in Marketing</h1>
+    <div class="cue rv d3"><i></i><span>Scroll</span></div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="sec a-amber" data-title="Our Mission">
+  <div class="w center">
+    <div class="page rv">Our Mission</div>
+    <h2 class="rv">The Purpose of This Project</h2>
+    <p class="big lede rv d1">To find out what subliminal messaging really is, what the science (neurologically) can actually prove, and whether any of it is able to explain how a clothing brand establishes an audience.</p>
+    <p class="lede rv d2"><i>Focus questions gone over and the extent of the research included</i></p>
+    <div class="qlist" style="max-width:780px;margin-left:auto;margin-right:auto">
+      <li class="rv d1"><b>Q1</b><div><div class="t">What is subliminal messaging in the brain, and how does it function/work?</div><div class="s">Partly answered (what it does to behavior, not what the brain physically does)</div></div></li>
+      <li class="rv d2"><b>Q2</b><div><div class="t">How does subliminal messaging appear throughout social media short-form content?</div><div class="s">Partly answered (lack of real-world studies done, based off of related studies instead)</div></div></li>
+      <li class="rv d3"><b>Q3</b><div><div class="t">What triggers subliminal messaging, and how does it affect everyday life?</div><div class="s">Partly answered, with sources</div></div></li>
+      <li class="rv d4"><b>Q4</b><div><div class="t">What decides if something is a subliminal message?</div><div class="s">Answered</div></div></li>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT IS -->
+<section class="sec a-blue" id="p-what" data-title="What It Is">
+  <div class="w center">
+    <div class="page rv">What It Is</div>
+    <h2 class="rv">What is subliminal messaging?</h2>
+    <p class="big lede rv d1">A message received by a person, subconsciously.</p>
+    <div class="mine rv d2" style="margin-left:auto;margin-right:auto;text-align:left">
+      <div class="who">In my own words</div>
+      <p>Subliminal messaging in advertising utilizes a person's psychological traits (like emotions, impulse, reasoning, etc.) to expose them to a brand's image, like the product or "message," without their knowledge. Subliminal messaging is able to expose a person to certain things without the conscious knowledge that they are being exposed to those things.</p>
+    </div>
+    <div class="model rv d2">
+      <div class="mstage"><canvas id="thrCv"></canvas>
+      <div class="mhead"><div class="mtag">The threshold</div><div class="mread" id="thrRead">41% noticed</div></div>
+      <div class="mkey"><span><i style="background:#ff7a3d"></i> Supraliminal</span><span><i style="background:#5e9eff"></i> Subliminal</span></div></div><div class="mfoot">
+        <div class="mlab"><span>Where your awareness sits</span><b id="thrOut">Middle</b></div>
+        <input type="range" id="thrSlide" min="0" max="100" value="50" aria-label="Awareness threshold">
+        <p class="mcap">Every orange dot represents what you do notice, every blue dot represents what you don't. (Supraliminal versus subliminal)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THRESHOLD DEMO -->
+<section class="sec a-blue" data-title="Where is the line?">
+  <div class="w center">
+    <div class="page rv">What It Is</div>
+    <h2 class="rv">The threshold of “consciousness”</h2>
+    <p class="big lede rv d1">The faster it gets, the less likely you are to notice it.</p>
+    <div class="pane rv d2" style="max-width:560px;margin-left:auto;margin-right:auto">
+      <div class="pills" id="ftPills" role="group" aria-label="Flash duration">
+        <button class="pill" data-ms="17" aria-pressed="false">17 ms</button>
+        <button class="pill" data-ms="33" aria-pressed="true">33 ms</button>
+        <button class="pill" data-ms="67" aria-pressed="false">67 ms</button>
+        <button class="pill" data-ms="133" aria-pressed="false">133 ms</button>
+        <button class="pill" data-ms="400" aria-pressed="false">400 ms</button>
+      </div>
+      <div class="stage" id="ftStage" aria-live="polite"><span><small>A word flashes, then a jumble covers it.<br>Say which word it was.</small></span></div>
+      <div class="opts" id="ftOpts"></div>
+      <button class="go" id="ftGo" style="margin-top:14px;width:100%">Run it</button>
+      <div class="note" id="ftNote">Pick a speed and go. Chance is 1 in 4. This demonstrates the definition. It is not an experiment from any source here.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES -->
+<section class="sec a-amber" id="p-types" data-title="Types of Stimuli">
+  <div class="w center">
+    <div class="page rv">Types of Stimuli</div>
+    <h2 class="rv">Does subliminal messaging (in marketing) actually work?</h2>
+    <p class="big lede rv d1">Results vary <em>significantly</em>, despite there being hundreds of studies conducted on this concept.<sup><a href="#fn1">1</a></sup></p>
+    <p class="lede rv d2">Subliminal messaging can change how you feel, what you do, and how/what you think about something. However, only <strong>certain kinds</strong> of messages can do this, and only under <strong>certain conditions.</strong> (Very fragile)</p>
+    <div class="nums">
+      <div class="rv"><div class="n">3</div><div class="l">Types</div><div class="s">Only two “actually” work</div></div>
+      <div class="rv d1"><div class="n">2</div><div class="l">Conditions</div><div class="s">(Type and circumstance)</div></div>
+      <div class="rv d2"><div class="n">100s</div><div class="l">Experiments</div><div class="s">Behind subliminal messaging in marketing</div></div>
+      <div class="rv d3"><div class="n">1989</div><div class="l">Review</div><div class="s">Where the verdict originates from</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PINNED -->
+<section class="pin a-orange" data-title="Three types">
+  <div class="inner">
+    <div class="pin-vis">
+      <div class="model">
+        <canvas id="someCv"></canvas>
+        <div class="mhead"><div class="mtag">Each dot is one study</div><div class="mread" id="someRead">4% found an effect</div></div>
+        <div class="mkey"><span><i style="background:#ff7a3d"></i> Reliable effect</span><span><i style="background:#5e9eff"></i> Nothing</span></div>
+      </div>
+    </div>
+    <div class="pin-steps">
+      <div class="pin-step" data-m="0">
+        <div class="k">Type 1 &nbsp;·&nbsp; Direct instruction</div>
+        <div class="t">Telling people what to do, straight up.</div>
+        <p>Phrases like “BUY POPCORN” or “DRINK COKE” have been shown to do nothing at all, or at most something very weak (insignificant enough that nobody could get it to happen again).<sup><a href="#fn1">1</a></sup></p>
+      </div>
+      <div class="pin-step" data-m="1">
+        <div class="k">Type 2 &nbsp;·&nbsp; Drive or affect</div>
+        <div class="t">Hinting at something the consumer already feels.</div>
+        <p>Not a direct order, but rather a “hint” or type of feeling associated with the brand. Most of the studies that got strong, repeatable results were doing this, under the right conditions.<sup><a href="#fn1">1</a></sup></p>
+      </div>
+      <div class="pin-step" data-m="2">
+        <div class="k">Type 3 &nbsp;·&nbsp; Lexical primes</div>
+        <div class="t">Pushing a certain word for repeated recognition.</div>
+        <p>Similar to the overarching theme of subliminal messaging, but instead uses smaller words as hints, slowly associating those words with certain feelings towards a brand (although considered “weak” by some researchers).<sup><a href="#fn1">1</a></sup></p>
+      </div>
+      <div class="pin-step" data-m="1">
+        <div class="k">The general pattern</div>
+        <div class="t">Giving a direct order versus leading with emotion.</div>
+        <p>Mindlessly pushing something, versus pushing with intention.<sup><a href="#fn1">1</a></sup></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ 1 -->
+<section class="sec a-orange" data-title="Call it yourself">
+  <div class="w center">
+    <div class="page rv">Types of Stimuli</div>
+    <h2 class="rv">What can you call them?</h2>
+    <p class="big lede rv d1">Six different approaches to subliminal messaging.</p>
+    <div class="quiz rv d2" id="sortBox"></div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="sec a-cyan" id="p-who" data-title="How It Affects People">
+  <div class="w center">
+    <div class="page rv">How It Affects People</div>
+    <h2 class="rv">Does it affect everyone the same way?</h2>
+    <p class="big lede rv d1">The message lands differently, depending on the person.<sup><a href="#fn2">2</a></sup></p>
+    <p class="lede rv d2">Anxious people tend to pick up emotion-driven words more than plain (emotionless) ones, as do people who are more open and less guarded.<sup><a href="#fn2">2</a></sup></p>
+    <p class="lede rv d2">The question of <em>“does it work”</em> in the context of clothing brand marketing is wrong. Clothing brands get to pick their audience, so <em>“who does it work on”</em> is much more effective, and accurate.</p>
+    <div class="model rv d2">
+      <div class="mstage"><canvas id="crowdCv"></canvas>
+      <div class="mhead"><div class="mtag">One cue, many people</div><div class="mread" id="crowdRead">18% responded</div></div>
+      <div class="mkey"><span><i style="background:#ff7a3d"></i> Responded</span><span><i style="background:#5e9eff"></i> Nothing</span></div></div><div class="mfoot">
+        <div class="mlab"><span>How emotional the cue is</span><b id="crowdOut">Neutral</b></div>
+        <input type="range" id="crowdSlide" min="0" max="100" value="18" aria-label="Emotional content of the cue">
+        <p class="mcap">The same signal/cue reaches everyone at once, at the same level, but people respond differently.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHORT-FORM CONTENT -->
+<section class="sec a-cyan" id="p-short" data-title="Short-Form Content">
+  <div class="w center">
+    <div class="page rv">Short-Form Content</div>
+    <h2 class="rv">What happens when the video is three seconds long?</h2>
+    <p class="big lede rv d1">Your brain decides whether it likes an ad before you've even thought about it.</p>
+    <p class="lede rv d1">A 2024 fMRI study published in the <em>Journal of Marketing Research</em> found that neural signals tied to emotion begin predicting whether someone will like a video ad within three seconds of watching. Social cognition (the part of your brain that reads other people) came in, then executive function (the part of the brain that thinks critically about a situation). This came last, and is the opposite of “liking” something. In other words, the more you think about it, the less you like it.<sup><a href="#fn12">12</a></sup></p>
+    <p class="lede rv d2">That matters because short-form content doesn't give the executive function any time to show up. In this case, a three-second TikTok or Instagram Reel can land the emotional hook before the critical part of your brain has even started to process it, which is why social media is such a powerful tool in advertising (but also very hard).</p>
+    <p class="lede rv d2">A separate 2024 peer-reviewed study ran a two-week diary study with regular TikTok and Instagram Reels users, where every single participant said that short videos had changed their views on topics they had already considered important to them. The majority of the time, the participants didn't look for those videos. Instead, they encountered them passively through their FYP (or other forms of that), and most of them didn't even fact-check what they saw.<sup><a href="#fn13">13</a></sup></p>
+    <p class="lede rv d3">Neither of these studies uses the word “subliminal” (in the context of marketing). But the pattern they describe (an emotional response landing before critical thinking can catch up), delivered through short-form content, relates back to the core concept of subliminal messaging in marketing: experiencing something without consciously knowing.</p>
+  </div>
+</section>
+
+<!-- MARKETING -->
+<section class="sec a-pink" id="p-marketing" data-title="In Marketing">
+  <div class="w center">
+    <div class="page rv">Applied to marketing</div>
+    <h2 class="rv">How does this apply to marketing?</h2>
+    <p class="big lede rv d1">Instead of the brand communicating to the consumer, it <em>becomes</em> the consumer's personality.<sup><a href="#fn2">2</a></sup></p>
+    <p class="lede rv d1">Clothing can be a statement about who you are as a person, making it all the more effective.</p>
+    <div class="mine rv d2" style="margin-left:auto;margin-right:auto;text-align:left">
+      <div class="who">In my own words</div>
+      <p>Subliminal messaging in the streetwear space takes advantage of a person's emotional state, subconsciously exposing them to information about a certain brand. In the context of social media marketing for a clothing brand (in the streetwear space), subliminal messaging can be used to make the consumer feel/associate a certain feeling or emotion to the brand, tying them or making them feel like they "belong" to that brand (community).</p>
+    </div>
+    <div class="model rv d2">
+      <div class="mstage"><canvas id="wearCv"></canvas>
+      <div class="mhead"><div class="mtag">Object, or identity</div><div class="mread" id="wearRead">A jacket</div></div></div><div class="mfoot">
+        <div class="mlab"><span>Drag it</span><b>Garment to person</b></div>
+        <input type="range" id="wearSlide" min="0" max="100" value="0" aria-label="Garment to person">
+        <p class="mcap">How a clothing brand can slowly become a part of your identity, through personal interests, shared experiences, etc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE AD -->
+<section class="sec a-orange" data-title="September 2000">
+  <div class="w center">
+    <div class="page rv">In Marketing</div>
+    <h2 class="rv">Has this ever actually been used?</h2>
+    <p class="big lede rv d1">(Outside of the modern marketing space)</p>
+    <p class="lede rv d1">In September of 2000, a George W. Bush campaign ad was accused of showing his opponent Al Gore's face while pieces of the words “bureaucrats” and “democrats” flashed on screen repeatedly.<sup><a href="#fn3">3</a></sup> This technique is called <em>evaluative conditioning</em>: when an ad or piece of media pairs two things together enough times, the feeling from one rubs off on the other, establishing a negative or positive connotation with the consumer.</p>
+    <p class="lede rv d2">(The only documented case was political, not anything product-based)</p>
+    <div class="pane rv d2" style="max-width:620px;margin-left:auto;margin-right:auto">
+      <div class="adScreen" id="adScreen"><div class="gh">Opponent</div><div class="fw" id="adWord">&nbsp;</div></div>
+      <div class="adFoot"><button class="go" id="adGo">Play reconstruction</button><span id="adCount">A schematic, not real footage</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="sec a-orange" id="p-case" data-title="Case Study">
+  <div class="w wide center">
+    <div class="page rv">Case Study</div>
+    <h2 class="rv">Corteiz - Case Study</h2>
+    <p class="big lede rv d1">Founded in London in 2017 by Clint Ogbenna (Clint419), Corteiz relies on indirect messaging for its marketing, present even in their logo and slogan (Alcatraz Island, Rules The World).<sup><a href="#fn4">4</a></sup></p>
+    <p class="lede rv d2">Clint took a completely different approach to marketing a clothing brand (and marketing in general), doing the complete opposite of typical methods: locking the website, making the Instagram account private, etc.</p>
+    <div class="model rv d2" style="max-width:700px;margin-left:auto;margin-right:auto">
+      <div class="mstage"><canvas id="gateCv"></canvas>
+      <div class="mhead"><div class="mtag">The access filter</div><div class="mread" id="gateRead">9% get through</div></div>
+      <div class="mkey"><span><i style="background:#ff7a3d"></i> Got in</span><span><i style="background:#5e9eff"></i> Missed it</span></div></div><div class="mfoot">
+        <div class="mlab"><span>How much warning he gives</span><b id="gateOut">Minutes</b></div>
+        <input type="range" id="gateSlide" min="4" max="100" value="12" aria-label="Amount of warning before a drop">
+        <p class="mcap">The site password acts as a deliberate barrier towards his audience.</p>
+      </div>
+    </div>
+    <div class="tacs">
+      <div class="tac rv"><b>01</b><p class="see">The Instagram account was set to private. To see anything from the brand, you had to get accepted first.</p><div class="says">Instead of being an audience, you are a part of a list.</div><p class="cred">4, 9</p></div>
+      <div class="tac rv d1"><b>02</b><p class="see">The entire website sits under a password until drop day. When drop day comes around, you still need a password to get in.</p><div class="says">To even get into the website to buy something, you need to pay attention.</div><p class="cred">4, 5</p></div>
+      <div class="tac rv d2"><b>03</b><p class="see">For in-person drops, he posts GPS coordinates of whatever city he's in at the time.</p><div class="says">People turning up to buy is the proof; effort is more valuable than money.</div><p class="cred">4, 5</p></div>
+      <div class="tac rv"><b>04 &nbsp;·&nbsp; Jan 2022</b><p class="see">In January of 2022, he hosted “Da Great Bolo Exchange.” Customers had to bring a puffer from North Face, Supreme, Moncler, Stone Island or Arc'teryx (any big-name, luxury brand) to a West London car park and swap it, free, for one of fifty unreleased Corteiz Bolo jackets.</p><div class="says">Give up “their” logo for Corteiz's.</div><p class="cred">6, 7, 8</p></div>
+      <div class="tac rv d1"><b>05</b><p class="see">The 99p Cargos: cargos for pennies, bring exact change, leading to around three thousand people showing up, following clues in order to find the location.<br><br>No Travelcard No Tee: be in Zone 1 at 3pm with a travelcard, get a free shirt.</p><div class="says">Community building over profit.</div><p class="cred">4, 10</p></div>
+      <div class="tac rv d2"><b>06 &nbsp;·&nbsp; 2023</b><p class="see">When Corteiz collaborated with Nike on the Corteiz Air Max 95, they released an ad on the scenario that the drop had been canceled, depicting people tearing apart London in an effort to find them.</p><div class="says">Instead of advertising the product, advertise the want for it.</div><p class="cred">11</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="sec a-orange" data-title="By the numbers">
+  <div class="w center">
+    <div class="page rv">Case Study</div>
+    <h2 class="rv">What it looked like in practice</h2>
+    <div class="nums">
+      <div class="rv"><div class="n">16</div><div class="l">Hoodies</div><div class="s">The amount sold in his first drop in 2017</div></div>
+      <div class="rv d1"><div class="n">50</div><div class="l">Jackets</div><div class="s">That were available to swap in “Da Great Bolo Exchange”</div></div>
+      <div class="rv d2"><div class="n">£16k</div><div class="l">Of coats</div><div class="s">Collected, which were then given to charity</div></div>
+      <div class="rv d3"><div class="n">3,000</div><div class="l">People</div><div class="s">Followed clues to the 99p Store</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECTING -->
+<section class="sec a-cyan" data-title="Connecting it back">
+  <div class="w">
+    <div class="page rv">Case Study</div>
+    <h2 class="rv">How do Corteiz's methods relate to the research?</h2>
+    <div class="mine rv d1" style="margin-top:30px">
+      <div class="who">In my own words</div>
+      <p>Strategies used in this type of marketing (hype-based clothing) rely heavily on applying subconscious feeling amongst the consumer, leading them to willingly follow a brand, establishing something of a "cult," or community surrounding the brand.</p>
+    </div>
+    <div class="links">
+      <div class="link rv">
+        <div class="h">Clint never gave an “order.”</div>
+        <p>Clint went the complete opposite of typical brands' advertising. Instead of asking for people's attention, he made them ask him for his, making it as hard as possible to buy his product.</p>
+      </div>
+      <div class="link rv d1">
+        <div class="h">Swapping one identity for another (Da Great Bolo Exchange)</div>
+        <p>Swapping something like a North Face coat for a coat they had never seen before didn't make sense, but swapping something with no emotion for something <i>with emotion</i> did.</p>
+      </div>
+      <div class="link rv d2">
+        <div class="h">He gets to choose his audience.</div>
+        <p>Since Clint's method doesn't work on everyone, he does as much as he can to get the attention of the people who are already interested. As a result, the format does his targeting for him.<sup><a href="#fn2">2</a></sup></p>
+      </div>
+      <div class="link warn rv d3">
+        <div class="h">Corteiz isn't “fully” subliminal.</div>
+        <p>Based on the sources and my own understanding of subliminal messaging, Clint's marketing strategy is a mix of supraliminal and subliminal messaging, leaning more towards <strong>supraliminal.</strong><sup><a href="#fn2">2</a></sup></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MY OWN BRAND -->
+<section class="sec a-amber" id="p-brand" data-title="My Own Brand">
+  <div class="w center">
+    <div class="page rv">My Own Brand</div>
+    <h2 class="rv">My own brand as an example</h2>
+    <p class="big lede rv d1">My own brand, h4nsmade, with real numbers pulled from my Shopify, Instagram and Klaviyo.<sup><a href="#fn14">14</a></sup><sup><a href="#fn15">15</a></sup><sup><a href="#fn16">16</a></sup></p>
+    <p class="lede rv d2">In the past 30 days, I've posted 27 times about my henley drop. 83% of those views came from people who don't follow me, a similar circumstance to the one explored in the Reels diary study I went over earlier.<sup><a href="#fn13">13</a></sup></p>
+    <div class="hb-stats">
+      <div class="rv"><div class="hb-num" data-to="61515">61,515</div><div class="hb-lab">Views</div><div class="hb-sub">Oct 19 to Nov 17</div></div>
+      <div class="rv d1"><div class="hb-num" data-to="83" data-suf="%">83%</div><div class="hb-lab">From strangers</div><div class="hb-sub">Views from non-followers</div></div>
+      <div class="rv d2"><div class="hb-num" data-to="134" data-pre="+">+134</div><div class="hb-lab">Followers</div><div class="hb-sub">New in the same 30 days</div></div>
+      <div class="rv d3"><div class="hb-num" data-to="22">22</div><div class="hb-lab">Orders</div><div class="hb-sub">On the henley drop</div></div>
+    </div>
+    <div class="hb-panel rv d2">
+      <div class="hb-head"><span>Instagram views per day, Shopify orders underneath</span><span class="hb-read" id="hbLineRead"></span></div>
+      <svg class="hb-svg" id="hbLine" role="img" aria-label="Daily Instagram views and Shopify orders, October 19 to November 17, 2026"></svg>
+      <p class="hb-cap">Drag across to see specific data. Views build up from Oct. 19, eventually leading up to drop day (Nov. 5), and to ~22 orders.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec a-cyan" data-title="Three seconds">
+  <div class="w center">
+    <div class="page rv">My Own Brand</div>
+    <h2 class="rv">Do people make it to three seconds?</h2>
+    <p class="big lede rv d1">Across the 24 reels posted, an average of 59% of viewers left before the three-second mark.<sup><a href="#fn15">15</a></sup></p>
+    <p class="lede rv d1">Same window where the fMRI study found emotion starts predicting whether you'll like an ad or not.<sup><a href="#fn12">12</a></sup> The success of the reels depends on whether they invoke emotion within the viewer or not.</p>
+    <div class="hb-stats three">
+      <div class="rv"><div class="hb-num" data-to="59" data-suf="%">59%</div><div class="hb-lab">Gone in 3 seconds</div><div class="hb-sub">Average across 24 reels</div></div>
+      <div class="rv d1"><div class="hb-num" data-to="5.2" data-dec="1" data-suf="s">5.2s</div><div class="hb-lab">Average watch</div><div class="hb-sub">Per view</div></div>
+      <div class="rv d2"><div class="hb-num" data-to="9.6" data-dec="1" data-suf="s">9.6s</div><div class="hb-lab">Longest average watch</div><div class="hb-sub">The every-order-shipped update</div></div>
+    </div>
+    <div class="hb-panel rv d2">
+      <div class="hb-head"><div class="hb-key"><span><i style="background:var(--accent)"></i> Stayed past 3 seconds</span><span><i style="background:rgba(94,158,255,.55)"></i> Swiped away</span></div><span class="hb-read" id="hbSkipRead"></span></div>
+      <div class="hb-rows" id="hbRows"></div>
+      <p class="hb-cap">Each line is one reel, best at the top. Hover one to see it; white labels are the three that weren't straight product pushes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec a-amber" data-title="The funnel">
+  <div class="w center">
+    <div class="page rv">My Own Brand</div>
+    <h2 class="rv">How many strangers actually buy?</h2>
+    <p class="big lede rv d1">33,587 views around the drop, 19 paid checkouts.</p>
+    <p class="lede rv d1">Around nine in ten people who put a henley in their cart made it to checkout, and around two in three left without paying.<sup><a href="#fn14">14</a></sup></p>
+    <div class="hb-panel rv d2" style="max-width:720px;margin-left:auto;margin-right:auto">
+      <div class="hb-fu" id="hbFu">
+        <div class="fu"><div class="fu-top"><span>Instagram views</span><b data-to="33587">33,587</b></div><div class="fu-ln"><i data-w="100"></i></div><div class="fu-rt">Nov 2 to Nov 17</div></div>
+        <div class="fu"><div class="fu-top"><span>Store visits</span><b data-to="877">877</b></div><div class="fu-ln"><i data-w="65"></i></div><div class="fu-rt">2.6% of views</div></div>
+        <div class="fu"><div class="fu-top"><span>Added to cart</span><b data-to="65">65</b></div><div class="fu-ln"><i data-w="40"></i></div><div class="fu-rt">7.4% of visits</div></div>
+        <div class="fu"><div class="fu-top"><span>Reached checkout</span><b data-to="58">58</b></div><div class="fu-ln"><i data-w="39"></i></div><div class="fu-rt">89% of carts</div></div>
+        <div class="fu hot"><div class="fu-top"><span>Paid</span><b data-to="19">19</b></div><div class="fu-ln"><i data-w="28"></i></div><div class="fu-rt">Only 33% of checkouts</div></div>
+      </div>
+      <p class="hb-cap">Lines are on a log scale, otherwise the bottom four would be invisible. Instagram and Shopify don't share tracking, so the top step is the same time window, not a proven path.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec a-orange" data-title="Four drops">
+  <div class="w center">
+    <div class="page rv">My Own Brand</div>
+    <h2 class="rv">Did a month of posting change anything?</h2>
+    <p class="big lede rv d1">My first drop sold ~95, but only because I ran ads. Once I stopped running ads, the next three drops sold 2, then 4, then 22.<sup><a href="#fn14">14</a></sup></p>
+    <div class="hb-drops">
+      <div class="hb-drop rv"><div class="wn">Jul to Aug 2025 &nbsp;·&nbsp; paid ads</div><div class="dn" data-to="95">95</div><div class="wt">orders &nbsp;·&nbsp; first drop</div><svg data-spark="210,1474,829,880,1475,1459,1269" data-dot="-1" aria-hidden="true"></svg><div class="mt"><span>7,929 visits, 7 weeks</span><span>1.1% bought</span></div></div>
+      <div class="hb-drop rv d1"><div class="wn">Jun 2026</div><div class="dn" data-to="2">2</div><div class="wt">orders &nbsp;·&nbsp; ‘legacy’ 01, made to order</div><svg data-spark="74,199,193,184,255" aria-hidden="true"></svg><div class="mt"><span>193 visits, drop week</span><span>1.0% bought</span></div></div>
+      <div class="hb-drop rv d2"><div class="wn">Sep 2026</div><div class="dn" data-to="4">4</div><div class="wt">orders &nbsp;·&nbsp; ‘territory’ tee</div><svg data-spark="27,18,218,107,44" aria-hidden="true"></svg><div class="mt"><span>218 visits, drop week</span><span>1.8% bought</span></div></div>
+      <div class="hb-drop hot rv d3"><div class="wn">Nov 2026 &nbsp;·&nbsp; organic</div><div class="dn" data-to="22">22</div><div class="wt">orders &nbsp;·&nbsp; slub henley, cut and sew</div><svg data-spark="125,175,605,226,46" aria-hidden="true"></svg><div class="mt"><span>605 visits, drop week</span><span>2.8% bought</span></div></div>
+    </div>
+    <p class="fine rv" style="margin:16px auto 0">Lines show weekly store visits, all on the same scale.</p>
+    <p class="lede rv d1">Between the tee and the henley I changed a lot at once. A full month of daily reels; one date, announced two weeks out; an SMS list I built over the course of the month; switching from blanks to cut and sew. A lot of different factors to consider, making it hard to say which one actually made a difference.</p>
+    <p class="lede rv d1">In July to August of 2025, visits from my Facebook and Instagram (Meta) ads made up 58% of the traffic, but only 0.7% of them bought (a 0.7% conversion rate). Everyone else, coming organically, bought at 1.7%. My fully organic henley drop converted better than both of them (2.8%) with zero ad spend. Granted, I didn't sell nearly as much and didn't have as much exposure (sessions).</p>
+    <p class="lede rv d1">Out of the 266 people on my SMS list, 9 people bought on drop day. That's about 41% of all henley orders, from an audience significantly smaller than my Instagram following (564).<sup><a href="#fn16">16</a></sup></p>
+    <div class="hb-stats three">
+      <div class="rv"><div class="hb-num" data-to="0.7" data-dec="1" data-suf="%">0.7%</div><div class="hb-lab">Strangers from ads</div><div class="hb-sub">Ad-tagged visits that bought, 2025</div></div>
+      <div class="rv d1"><div class="hb-num" data-to="2.8" data-dec="1" data-suf="%">2.8%</div><div class="hb-lab">Organic visitors</div><div class="hb-sub">Store visits that bought, henley week</div></div>
+      <div class="rv d2"><div class="hb-num" data-to="3.4" data-dec="1" data-suf="%">3.4%</div><div class="hb-lab">My SMS list</div><div class="hb-sub">Texted people who bought</div></div>
+    </div>
+    <p class="fine rv" style="margin:16px auto 0">The first two are per store visit, the third is per person texted, so they aren't a perfect match. The warmer the audience, the more of it buys.</p>
+    <p class="lede rv d1">That's Corteiz's strategy, interpreted through my own brand. Instead of talking to an audience, he talks to a list of people. In other words, the same message lands differently with different people.<sup><a href="#fn2">2</a></sup></p>
+    <div class="link warn rv d2" style="max-width:700px;margin:48px auto 0;text-align:left">
+      <div class="h">What my data doesn't prove</div>
+      <p>When sorting my posts, I found that all 27 captions asked for something: “Join SMS,” “Dropping 11/5,” “Out now,” etc. There wasn't an indirect (subliminal) group to compare any of this against.</p>
+      <p>My most direct organic campaign was my best organic drop, out of the three organic drops I did. However, this time around, the drop was <strong>supraliminal</strong>, meaning that I was visibly stating or asking something in each post. Next time around, it'll be interesting to see if I can incorporate subliminal messaging instead.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ETHICS -->
+<section class="sec a-pink" id="p-ethics" data-title="Ethics &amp; Next Steps">
+  <div class="w center">
+    <div class="page rv">Ethics &amp; Next Steps</div>
+    <h2 class="rv">Is This Ethical?</h2>
+    <p class="big lede rv d1">Researchers question it, but don't give a concrete answer (yes/no).</p>
+    <p class="lede rv d1">Research on perception without awareness has provoked strong reactions from people inside and outside science, largely because of how easily the technique could be abused, and how “easily” it can be replicated.<sup><a href="#fn1">1</a></sup></p>
+    <div class="mine rv d2" style="margin-left:auto;margin-right:auto;text-align:left">
+      <div class="who">In my own words</div>
+      <p>The “darker” tactics of subliminal messaging in marketing can be intentionally manipulative, in multiple ways. Researchers also pose ethical concerns regarding subliminal marketing, providing examples of real-world scenarios (around politics and other fields). Sets up the core concept for modern clothing brand marketing, as well as general advertising, and poses questions of "Do we really want consciousness to be in charge?"</p>
+    </div>
+    <div class="mine rv d3" style="margin-left:auto;margin-right:auto;text-align:left">
+      <div class="who">In my own words</div>
+      <p>In the case of community building within modern streetwear clothing brands, the main way of establishing a base like this is through subliminal messaging, subconsciously convincing the consumer that they belong in that community, for whatever reason. To fully understand how and why brands choose to use subliminal messaging as a way of "propaganda" in recruiting consumers, I first have to understand what causes subliminal messaging and stimuli to be so effective and convincing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN -->
+<section class="sec a-pink" data-title="What is still open">
+  <div class="w">
+    <div class="page rv">Ethics &amp; Next Steps</div>
+    <h2 class="rv">Unanswered Questions</h2>
+    <div class="oq">
+      <div class="rv"><b>An assumption I had to drop</b><div class="t">Dopamine was involved</div><p>Before reading anything I wrote down that this "involves neurotransmitters like dopamine." None of my sources mention dopamine, or any type of neurotransmitter.</p></div>
+      <div class="rv d1"><b>Question 1 &nbsp;·&nbsp; partly answered</b><div class="t">Behaviour, not mechanism.</div><p>My sources describe what subliminal messaging does to people, but none of them explain what the brain is physically doing while it happens (less neuro-heavy research, and more behavioral).</p></div>
+      <div class="rv d2"><b>Question 2 &nbsp;·&nbsp; partly answered</b><div class="t">Both studies used are not directly about subliminal messaging.</div><p>One study shows the brain decides on ads in three seconds, whilst the other shows short videos change views passively. Neither of them uses the word “subliminal,” but the pattern lines up with the overarching concept. Out of what I could find, no study looks at short-form content and subliminal messaging together.</p></div>
+      <div class="rv d3"><b>Question 3 &nbsp;·&nbsp; partly answered</b><div class="t">One real-world, political case of subliminal messaging.</div><p>During a presidential campaign, not a brand campaign.</p></div>
+      <div class="rv d4"><b>Question 4 &nbsp;·&nbsp; answered</b><div class="t">Whether or not the person is conscious of the influence.</div><p>What I've gone over the most, and what it actually looks like and how it happens.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="sec a-grey" id="p-refs" data-title="References">
+  <div class="w">
+    <div class="page rv">References</div>
+    <h2 class="rv">Sources.</h2>
+    <ul class="fn">
+      <li id="fn1"><b>1</b><span>Bornstein, Robert F. "Subliminal Techniques as Propaganda Tools: Review and Critique." <i>The Journal of Mind and Behavior</i>, vol. 10, no. 3, 1989, pp. 231-62.</span></li>
+      <li id="fn2"><b>2</b><span>Borovac Zekan, Senka, and Ivone Zekan. "Subliminal Messages in Advertising: Do They Really Work?" <i>Dubrovnik International Economic Meeting</i>, edited by Ivona Vrdoljak Raguž, U of Dubrovnik, 2022.</span></li>
+      <li id="fn3"><b>3</b><span>Dijksterhuis, Ap, et al. "The Power of the Subliminal: On Subliminal Persuasion and Other Potential Applications." <i>The New Unconscious</i>, edited by Ran R. Hassin et al., Oxford UP, 2005, pp. 77-106.</span></li>
+      <li id="fn4"><b>4</b><span>Takanashi, Lei. "Everything About Corteiz." <i>Complex</i>. Accessed 17 Nov. 2026.</span></li>
+      <li id="fn5"><b>5</b><span>"Why Corteiz's Rise as a Streetwear Powerhouse Was Inevitable." <i>Hypebeast</i>, Feb. 2023.</span></li>
+      <li id="fn6"><b>6</b><span>"Da Great Bolo Exchange Proves Corteiz Does Ruletheworld." <i>Culted</i>. Accessed 17 Nov. 2026.</span></li>
+      <li id="fn7"><b>7</b><span>"Corteiz Locked Down London Over the Weekend With Its BOLO Exchange." <i>Complex</i>, Jan. 2022.</span></li>
+      <li id="fn8"><b>8</b><span>"How Corteiz Is Redefining Streetwear Culture in the UK." <i>The Native</i>.</span></li>
+      <li id="fn9"><b>9</b><span>"Corteiz: Meet the Label Behind Streetwear's Second Coming." <i>Opumo</i>.</span></li>
+      <li id="fn10"><b>10</b><span>"Inside Corteiz's 99p Store." <i>The Culture Crypt</i>.</span></li>
+      <li id="fn11"><b>11</b><span>"Nike x Corteiz Sends Stock Plummeting as Hype Builds for Air Max 95 Drop." <i>The Drum</i>, 3 Mar. 2023.</span></li>
+      <li id="fn12"><b>12</b><span>Chan, Hang-Yee, et al. "Neural Signals of Video Advertisement Liking: Insights into Psychological Processes and Their Temporal Dynamics." <i>Journal of Marketing Research</i>, vol. 61, no. 5, 2024, pp. 891-913.</span></li>
+      <li id="fn13"><b>13</b><span>Molem, Angela, et al. "Keepin' It Reel: Investigating How Short Videos on TikTok and Instagram Reels Influence View Change." <i>Proceedings of the 2024 ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR '24)</i>, ACM, 2024, pp. 317-27.</span></li>
+      <li id="fn14"><b>14</b><span>h4nsmade. Shopify store analytics for h4n.co: orders, sessions, traffic sources and checkout funnel, July 2025 to November 2026. Data pulled 17 Nov. 2026.</span></li>
+      <li id="fn15"><b>15</b><span>h4nsmade. Instagram Insights for @h4nsmade, 19 Oct. to 17 Nov. 2026, retrieved through Windsor.ai. Data pulled 17 Nov. 2026.</span></li>
+      <li id="fn16"><b>16</b><span>h4nsmade. Klaviyo SMS campaign report, “slub henley drop (11/5),” with attributed orders. Data pulled 17 Nov. 2026.</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+
+var rvs=$$(".rv");
+if(reduce){ rvs.forEach(function(e){e.classList.add("in")}) }
+else{
+  var rio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); rio.unobserve(e.target) } });
+  },{rootMargin:"0px 0px -10% 0px",threshold:.1});
+  rvs.forEach(function(e){rio.observe(e)});
+}
+
+var secs=$$("[data-title]"), cur=0, barEl=$("#bar");
+var navLinks=$$(".nav .links a"), navEl=$(".nav"), linkFor=[], lastL=null;
+secs.forEach(function(s){
+  if(s.id){ var m=navLinks.filter(function(a){return a.getAttribute("href")==="#"+s.id})[0]; if(m) lastL=m }
+  linkFor.push(lastL);
+});
+function setNav(i,cs){
+  navLinks.forEach(function(a){
+    var on=(a===linkFor[i]); a.classList.toggle("on",on);
+    if(on) a.setAttribute("aria-current","true"); else a.removeAttribute("aria-current");
+  });
+  if(cs) navEl.style.setProperty("--accent",cs.trim());
+}
+var sio=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      cur=secs.indexOf(e.target);
+      var cs=getComputedStyle(e.target).getPropertyValue("--accent");
+      if(cs) barEl.style.background=cs.trim();
+      setNav(cur,cs);
+    }
+  });
+},{rootMargin:"-45% 0px -45% 0px",threshold:0});
+secs.forEach(function(s){sio.observe(s)});
+
+var blackEl=$("#black");
+blackEl.addEventListener("click",function(){blackEl.classList.remove("on")});
+function jump(d){ secs[clamp(cur+d,0,secs.length-1)].scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"}) }
+window.addEventListener("keydown",function(e){
+  var t=e.target;
+  if(t&&(t.tagName==="INPUT"||t.isContentEditable)) return;
+  if(e.metaKey||e.ctrlKey||e.altKey) return;
+  var k=e.key;
+  if(k==="ArrowRight"||k==="PageDown"){ e.preventDefault(); jump(1) }
+  else if(k==="ArrowLeft"||k==="PageUp"){ e.preventDefault(); jump(-1) }
+  else if(k==="Home"){ e.preventDefault(); secs[0].scrollIntoView({behavior:"smooth"}) }
+  else if(k==="b"||k==="B"||k==="."){ e.preventDefault(); blackEl.classList.toggle("on") }
+});
+window.addEventListener("scroll",function(){
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  barEl.style.width=(h>0?(window.scrollY/h*100):0)+"%";
+},{passive:true});
+
+var HAS3D=(typeof THREE!=="undefined");
+function dotTexture(){
+  var c=document.createElement("canvas"); c.width=c.height=64;
+  var g=c.getContext("2d");
+  var gr=g.createRadialGradient(32,32,0,32,32,32);
+  gr.addColorStop(0,"rgba(255,255,255,1)"); gr.addColorStop(.3,"rgba(255,255,255,.7)"); gr.addColorStop(1,"rgba(255,255,255,0)");
+  g.fillStyle=gr; g.fillRect(0,0,64,64);
+  return new THREE.CanvasTexture(c);
+}
+function onScreen(el){ var r=el.getBoundingClientRect(); return r.bottom>0&&r.top<window.innerHeight }
+function stage3d(cv,fov,z){
+  if(!cv||!HAS3D) return null;
+  var scene=new THREE.Scene();
+  var cam=new THREE.PerspectiveCamera(fov,1,.1,100); cam.position.set(0,0,z);
+  var ren; try{ ren=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true}) }catch(e){ return null }
+  ren.setClearColor(0x000000,0);
+  function size(){
+    var r=cv.getBoundingClientRect(); if(r.width<2||r.height<2) return;
+    ren.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+    ren.setSize(r.width,r.height,false);
+    cam.aspect=r.width/r.height; cam.updateProjectionMatrix();
+  }
+  size();
+  var rz; window.addEventListener("resize",function(){clearTimeout(rz);rz=setTimeout(size,140)});
+  return {scene:scene,cam:cam,ren:ren,run:function(step){
+    function frame(now){
+      if(!onScreen(cv)){ requestAnimationFrame(frame); return }
+      step(now); ren.render(scene,cam);
+      if(!reduce) requestAnimationFrame(frame);
+    }
+    if(reduce){ step(performance.now()); ren.render(scene,cam) } else requestAnimationFrame(frame);
+  }};
+}
+function cloud(n,sz){
+  var g=new THREE.BufferGeometry();
+  g.setAttribute("position",new THREE.BufferAttribute(new Float32Array(n*3),3));
+  g.setAttribute("color",new THREE.BufferAttribute(new Float32Array(n*3),3));
+  return {geo:g,pts:new THREE.Points(g,new THREE.PointsMaterial({size:sz,map:dotTexture(),transparent:true,depthWrite:false,vertexColors:true,blending:THREE.AdditiveBlending}))};
+}
+function segDist(px,py,ax,ay,bx,by){
+  var dx=bx-ax, dy=by-ay, L=dx*dx+dy*dy;
+  var t=L?Math.max(0,Math.min(1,((px-ax)*dx+(py-ay)*dy)/L)):0;
+  var cx=ax+t*dx, cy=ay+t*dy;
+  return Math.sqrt((px-cx)*(px-cx)+(py-cy)*(py-cy));
+}
+function paint(arr,i,lit,amb){
+  amb*=2.6;
+  arr[i*3]  = amb*.37 + lit*1.00;
+  arr[i*3+1]= amb*.62 + lit*.42;
+  arr[i*3+2]= amb*1.00 - lit*.10;
+}
+
+/* hero */
+(function(){
+  var cv=$("#heroCv"); var st=stage3d(cv,52,8.4); if(!st){ if(cv)cv.style.display="none"; return }
+  var C=2200, c=cloud(C,.085), P=c.geo.attributes.position.array, CO=c.geo.attributes.color.array, base=[];
+  var gold=Math.PI*(3-Math.sqrt(5));
+  for(var i=0;i<C;i++){
+    var y=1-(i/(C-1))*2, rad=Math.sqrt(Math.max(0,1-y*y)), th=gold*i;
+    var w=1+.13*Math.sin(y*11+th*2.2)+.08*Math.cos(th*5.5), R=2.65*w;
+    var vx=Math.cos(th)*rad*R*1.22, vy=y*R*.86, vz=Math.sin(th)*rad*R;
+    P[i*3]=vx; P[i*3+1]=vy; P[i*3+2]=vz;
+    base.push(new THREE.Vector3(vx,vy,vz));
+  }
+  st.scene.add(c.pts);
+  var pulses=[], px=0, py=0, tgx=0, tgy=0;
+  function spawn(seed){ pulses.push({c:(seed||base[(Math.random()*base.length)|0]).clone(),r:0,sp:2.2+Math.random()*1.3}); if(pulses.length>4) pulses.shift() }
+  spawn(); spawn();
+  $("#hero").addEventListener("pointermove",function(e){
+    var r=cv.getBoundingClientRect();
+    tgx=((e.clientX-r.left)/r.width-.5)*2; tgy=((e.clientY-r.top)/r.height-.5)*2;
+    if(Math.random()<.035){
+      var best=base[0], bd=1e9;
+      for(var s=0;s<60;s++){
+        var q=base[(Math.random()*base.length)|0], sx=q.x/3.4, sy=-q.y/3.4;
+        var d=(sx-tgx)*(sx-tgx)+(sy-tgy)*(sy-tgy); if(d<bd){bd=d;best=q}
+      }
+      spawn(best);
+    }
+  },{passive:true});
+  var t0=performance.now(), nextAuto=1200;
+  st.run(function(now){
+    var el=now-t0;
+    px+=(tgx-px)*.045; py+=(tgy-py)*.045;
+    c.pts.rotation.y=el*0.00013+px*0.42;
+    c.pts.rotation.x=-py*0.3+Math.sin(el*0.0002)*0.09;
+    if(el>nextAuto){ spawn(); nextAuto=el+1100+Math.random()*1400 }
+    for(var p=pulses.length-1;p>=0;p--){ pulses[p].r+=pulses[p].sp*0.0165; if(pulses[p].r>7.2) pulses.splice(p,1) }
+    for(var i=0;i<C;i++){
+      var b=base[i], hot=0;
+      for(var q=0;q<pulses.length;q++){
+        var pu=pulses[q], dx=b.x-pu.c.x, dy=b.y-pu.c.y, dz=b.z-pu.c.z;
+        var band=Math.abs(Math.sqrt(dx*dx+dy*dy+dz*dz)-pu.r);
+        if(band<.78) hot=Math.max(hot,(1-band/.78)*(1-pu.r/7.2));
+      }
+      paint(CO,i,hot*.95,(.09+.03*Math.sin(el*0.0024+i*1.7)));
+    }
+    c.geo.attributes.color.needsUpdate=true;
+  });
+})();
+
+/* threshold */
+(function(){
+  var cv=$("#thrCv"); if(!cv) return;
+  var slide=$("#thrSlide"), out=$("#thrOut"), read=$("#thrRead");
+  var st=stage3d(cv,46,9.2); if(!st){ cv.style.display="none"; return }
+  var C=820, c=cloud(C,.14), P=c.geo.attributes.position.array, CO=c.geo.attributes.color.array, nd=[];
+  for(var i=0;i<C;i++){
+    var x=(Math.random()-.5)*8.6;
+    P[i*3]=x; P[i*3+1]=(Math.random()-.5)*4.4; P[i*3+2]=(Math.random()-.5)*1.9;
+    nd.push({x:x,sp:.12+Math.random()*.3,ph:Math.random()*6.28,lit:0});
+  }
+  st.scene.add(c.pts);
+  var lg=new THREE.BufferGeometry();
+  lg.setAttribute("position",new THREE.BufferAttribute(new Float32Array([-4.5,0,0, 4.5,0,0]),3));
+  var line=new THREE.LineSegments(lg,new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.7}));
+  st.scene.add(line);
+  var ty=0;
+  function upd(){ var v=+slide.value/100; ty=(v-.5)*-4.0; out.textContent=v<.3?"Low":v<.7?"Middle":"High" }
+  slide.addEventListener("input",upd); upd();
+  var last=-1;
+  st.run(function(now){
+    line.position.y=ty;
+    var above=0;
+    for(var i=0;i<C;i++){
+      var n=nd[i];
+      n.x+=n.sp*0.012; if(n.x>4.4) n.x=-4.4;
+      P[i*3]=n.x;
+      var hot=(P[i*3+1]>ty)?1:0; if(hot) above++;
+      n.lit+=(hot-n.lit)*0.09;
+      paint(CO,i,n.lit,(.12+.04*Math.sin(now*0.0015+n.ph)));
+    }
+    c.geo.attributes.position.needsUpdate=true; c.geo.attributes.color.needsUpdate=true;
+    var pct=Math.round(above/C*100);
+    if(pct!==last){ last=pct; read.textContent=pct+"% noticed" }
+  });
+})();
+
+/* three types */
+(function(){
+  var cv=$("#someCv"); if(!cv) return;
+  var read=$("#someRead");
+  var MODES=[{r:.04,p:"4% found an effect"},{r:.62,p:"62% found an effect"},{r:.55,p:"55% found an effect"}];
+  var mode=0, steps=$$(".pin-step");
+  var pio=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        steps.forEach(function(s){s.classList.toggle("active",s===e.target)});
+        var m=+e.target.getAttribute("data-m");
+        if(m!==mode){ mode=m; read.textContent=MODES[m].p }
+      }
+    });
+  },{rootMargin:"-45% 0px -45% 0px",threshold:0});
+  steps.forEach(function(s){pio.observe(s)});
+  if(steps[0]) steps[0].classList.add("active");
+  var st=stage3d(cv,48,10); if(!st){ cv.style.display="none"; return }
+  var C=620, c=cloud(C,.17), P=c.geo.attributes.position.array, CO=c.geo.attributes.color.array, nd=[];
+  for(var i=0;i<C;i++){
+    var gx=i%31, gy=(i/31)|0;
+    P[i*3]=(gx-15)*0.42+(Math.random()-.5)*0.14;
+    P[i*3+1]=(gy-10)*0.42+(Math.random()-.5)*0.14;
+    P[i*3+2]=(Math.random()-.5)*1.6;
+    nd.push({lit:0,roll:Math.random(),ph:Math.random()*6.28});
+  }
+  st.scene.add(c.pts);
+  st.run(function(now){
+    var rate=MODES[mode].r;
+    for(var i=0;i<C;i++){
+      var n=nd[i], want=(n.roll<rate)?1:0;
+      n.lit+=(want-n.lit)*0.05;
+      paint(CO,i,n.lit*(1+.14*Math.sin(now*0.003+n.ph)),(.11+.04*Math.sin(now*0.0014+n.ph)));
+    }
+    c.geo.attributes.color.needsUpdate=true;
+    st.scene.rotation.y=Math.sin(now*0.00018)*0.17;
+    st.scene.rotation.x=Math.cos(now*0.00013)*0.07;
+  });
+})();
+
+/* crowd */
+(function(){
+  var cv=$("#crowdCv"); if(!cv) return;
+  var slide=$("#crowdSlide"), out=$("#crowdOut"), read=$("#crowdRead");
+  var st=stage3d(cv,46,10.4); if(!st){ cv.style.display="none"; return }
+  var COLS=26, ROWS=17, C=COLS*ROWS, c=cloud(C,.17);
+  var P=c.geo.attributes.position.array, CO=c.geo.attributes.color.array, nd=[];
+  for(var i=0;i<C;i++){
+    var gx=i%COLS, gy=(i/COLS)|0;
+    var x=(gx-(COLS-1)/2)*0.345+(Math.random()-.5)*0.1;
+    var y=(gy-(ROWS-1)/2)*0.345+(Math.random()-.5)*0.1;
+    P[i*3]=x; P[i*3+1]=y; P[i*3+2]=(Math.random()-.5)*0.7;
+    nd.push({recep:Math.random(),lit:0,ph:Math.random()*6.28,d:Math.sqrt(x*x+y*y)});
+  }
+  st.scene.add(c.pts);
+  var emo=.18;
+  function upd(){ emo=+slide.value/100; out.textContent=emo<.25?"Neutral":emo<.6?"Some feeling":"Highly emotional" }
+  slide.addEventListener("input",upd); upd();
+  var wave=0, last=-1;
+  st.run(function(now){
+    wave+=0.022; if(wave>7.2) wave=0;
+    var resp=0;
+    for(var i=0;i<C;i++){
+      var n=nd[i], hits=(n.recep<emo); if(hits) resp++;
+      var band=Math.abs(n.d-wave), pulse=band<0.75?(1-band/0.75):0;
+      var want=hits?Math.max(0.42,pulse):pulse*0.12;
+      n.lit+=(want-n.lit)*0.12;
+      paint(CO,i,n.lit,(.11+.035*Math.sin(now*0.0014+n.ph)));
+    }
+    c.geo.attributes.color.needsUpdate=true;
+    st.scene.rotation.y=Math.sin(now*0.00016)*0.14;
+    st.scene.rotation.x=Math.cos(now*0.00012)*0.06;
+    var pct=Math.round(resp/C*100);
+    if(pct!==last){ last=pct; read.textContent=pct+"% responded" }
+  });
+})();
+
+/* garment */
+(function(){
+  var cv=$("#wearCv"); if(!cv) return;
+  var slide=$("#wearSlide"), read=$("#wearRead");
+  var st=stage3d(cv,46,8.2); if(!st){ cv.style.display="none"; return }
+  function inHoodie(x,y){
+    if(Math.abs(x)<=0.86 && y>=-1.78 && y<=0.80) return true;
+    if(y>0.80 && (x*x)/(0.64*0.64)+((y-0.80)*(y-0.80))/(0.78*0.78)<=1) return true;
+    if(segDist(x,y, 0.80,0.60, 1.74,-0.48)<=0.31) return true;
+    if(segDist(x,y,-0.80,0.60,-1.74,-0.48)<=0.31) return true;
+    return false;
+  }
+  function inPerson(x,y){
+    if(x*x+(y-1.42)*(y-1.42)<=0.44*0.44) return true;
+    if(Math.abs(x)<=0.14 && y>0.92 && y<1.06) return true;
+    if(segDist(x,y,0,0.88,0,-0.22)<=0.50) return true;
+    if(segDist(x,y, 0.46,0.72, 0.98,-0.56)<=0.17) return true;
+    if(segDist(x,y,-0.46,0.72,-0.98,-0.56)<=0.17) return true;
+    if(segDist(x,y, 0.23,-0.22, 0.32,-1.86)<=0.20) return true;
+    if(segDist(x,y,-0.23,-0.22,-0.32,-1.86)<=0.20) return true;
+    return false;
+  }
+  function sample(fn,n){
+    var o=[], g=0;
+    while(o.length<n && g<n*220){ g++; var x=(Math.random()-.5)*4.2, y=(Math.random()-.5)*5.0; if(fn(x,y)) o.push([x,y]) }
+    while(o.length<n) o.push([0,0]);
+    o.sort(function(a,b){ return (b[1]-a[1])||(a[0]-b[0]) });
+    return o;
+  }
+  var C=1700, A=sample(inHoodie,C), B=sample(inPerson,C);
+  var c=cloud(C,.085), P=c.geo.attributes.position.array, CO=c.geo.attributes.color.array, zs=[], ph=[];
+  for(var i=0;i<C;i++){ zs.push((Math.random()-.5)*0.55); ph.push(Math.random()*6.28) }
+  st.scene.add(c.pts);
+  var t=0, target=0, touched=false, dir=1;
+  slide.addEventListener("input",function(){ touched=true; target=+slide.value/100 });
+  st.run(function(now){
+    if(!touched){
+      target+=0.0022*dir;
+      if(target>1){target=1;dir=-1} if(target<0){target=0;dir=1}
+      slide.value=Math.round(target*100);
+    }
+    t+=(target-t)*0.07;
+    var e=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+    for(var i=0;i<C;i++){
+      var a=A[i], b=B[i];
+      P[i*3]=a[0]+(b[0]-a[0])*e;
+      P[i*3+1]=a[1]+(b[1]-a[1])*e;
+      P[i*3+2]=zs[i]+Math.sin(now*0.0009+ph[i])*0.07;
+      var tw=.9+.1*Math.sin(now*0.0022+ph[i]*2);
+      CO[i*3]  =(0.42+(0.55+0.45*e)*0.72)*tw;
+      CO[i*3+1]=(0.34+(0.55+0.45*e)*0.14)*tw;
+      CO[i*3+2]=(0.98-(0.55+0.45*e)*0.62)*tw;
+    }
+    c.geo.attributes.position.needsUpdate=true; c.geo.attributes.color.needsUpdate=true;
+    st.scene.rotation.y=Math.sin(now*0.00022)*0.26;
+    read.textContent = t<0.25?"A jacket":t<0.72?"Becoming":"Part of who you are";
+  });
+})();
+
+/* access filter */
+(function(){
+  var cv=$("#gateCv"); if(!cv) return;
+  var slide=$("#gateSlide"), out=$("#gateOut"), read=$("#gateRead");
+  var st=stage3d(cv,46,10); if(!st){ cv.style.display="none"; return }
+  var C=1100, c=cloud(C,.12), P=c.geo.attributes.position.array, CO=c.geo.attributes.color.array, nd=[];
+  function spawn(n){ n.x=(Math.random()-.5)*7.4; n.y=2.9+Math.random()*1.6; n.z=(Math.random()-.5)*1.5; n.v=.021+Math.random()*.019; n.state=0; n.fade=0 }
+  for(var i=0;i<C;i++){ var n={ph:Math.random()*6.28}; spawn(n); n.y=(Math.random()-.5)*7; nd.push(n) }
+  st.scene.add(c.pts);
+  var gg=new THREE.BufferGeometry(), gp=new Float32Array(12);
+  gg.setAttribute("position",new THREE.BufferAttribute(gp,3));
+  st.scene.add(new THREE.LineSegments(gg,new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:.65})));
+  var gw=0.5;
+  function upd(){ gw=(+slide.value/100)*3.3; var v=+slide.value; out.textContent=v<16?"Minutes":v<45?"An hour":v<75?"A day":"A week" }
+  slide.addEventListener("input",upd); upd();
+  var through=0, total=0, last=-1;
+  st.run(function(now){
+    gp[0]=-3.9;gp[1]=0;gp[2]=0; gp[3]=-gw;gp[4]=0;gp[5]=0;
+    gp[6]=gw;gp[7]=0;gp[8]=0; gp[9]=3.9;gp[10]=0;gp[11]=0;
+    gg.attributes.position.needsUpdate=true;
+    for(var i=0;i<C;i++){
+      var n=nd[i], prev=n.y;
+      n.y-=n.v;
+      if(prev>0 && n.y<=0){
+        total++;
+        if(Math.abs(n.x)<=gw){ n.state=1; through++ } else n.state=2;
+        if(total>900){ total=Math.round(total/2); through=Math.round(through/2) }
+      }
+      if(n.state===2){ n.fade+=0.045; if(n.fade>1) spawn(n) }
+      if(n.y<-3.4) spawn(n);
+      P[i*3]=n.x; P[i*3+1]=n.y; P[i*3+2]=n.z;
+      var dim=(n.state===2)?Math.max(0,1-n.fade):1;
+      paint(CO,i,(n.state===1?1:0)*dim,(.13+.04*Math.sin(now*0.0015+n.ph))*dim);
+    }
+    c.geo.attributes.position.needsUpdate=true; c.geo.attributes.color.needsUpdate=true;
+    var pct= total>20 ? Math.round(through/total*100) : Math.round(gw/3.7*100);
+    if(pct!==last){ last=pct; read.textContent=pct+"% get through" }
+  });
+})();
+
+/* flash demo */
+(function(){
+  var WORDS=["tiger","drop","vault","crew","badge","lock","code","rule","press","pass"];
+  var ms=33, busy=false, target="", ok=0, n=0;
+  var stage=$("#ftStage"), opts=$("#ftOpts"), note=$("#ftNote"), btn=$("#ftGo");
+  $$("#ftPills .pill").forEach(function(b){
+    b.addEventListener("click",function(){
+      if(busy) return; ms=+b.getAttribute("data-ms");
+      $$("#ftPills .pill").forEach(function(o){o.setAttribute("aria-pressed",String(o===b))});
+    });
+  });
+  function shuffle(a){for(var i=a.length-1;i>0;i--){var j=(Math.random()*(i+1))|0,t=a[i];a[i]=a[j];a[j]=t}return a}
+  function maskStr(l){var m="",g="#%&@$*+=";for(var i=0;i<l;i++)m+=g.charAt((Math.random()*g.length)|0);return m}
+  function say(t,c,small){stage.innerHTML="";var s=document.createElement("span");s.textContent=t;if(c)s.style.color=c;if(small){s.style.fontSize="19px";s.style.fontWeight="400"}stage.appendChild(s)}
+  function wait(t){return new Promise(function(r){setTimeout(r,t)})}
+  function hold(t){return new Promise(function(res){var a=performance.now();(function tick(){performance.now()-a>=t-4?res():requestAnimationFrame(tick)})()})}
+  btn.addEventListener("click",function(){
+    if(busy) return; busy=true; btn.disabled=true; opts.innerHTML="";
+    target=WORDS[(Math.random()*WORDS.length)|0];
+    var ch=shuffle([target].concat(shuffle(WORDS.filter(function(w){return w!==target})).slice(0,3)));
+    say("+","#5e9eff");
+    wait(750).then(function(){ say(target); return hold(ms) })
+    .then(function(){ say(maskStr(Math.max(target.length,6)),"#5e9eff"); return wait(300) })
+    .then(function(){
+      say("Which word?",null,true);
+      ch.forEach(function(w){
+        var b=document.createElement("button"); b.type="button"; b.textContent=w;
+        b.addEventListener("click",function(){
+          n++; var good=(w===target); if(good) ok++;
+          $$("button",opts).forEach(function(x){x.disabled=true});
+          say(target, good?"#40d6c8":"#ff5c9d");
+          note.textContent=(good?"Got it. ":"It was "+target+". ")+"Flashed for "+ms+" ms. "+ok+" of "+n+" right so far.";
+          busy=false; btn.disabled=false; btn.textContent="Again";
+        });
+        opts.appendChild(b);
+      });
+    });
+  });
+})();
+
+/* quizzes */
+function buildQuiz(box,items,tiers,cls,end){
+  var i=0, score=0, locked=false;
+  function dots(){ var d=document.createElement("div"); d.className="dots";
+    for(var k=0;k<items.length;k++){ var s=document.createElement("i"); if(k<=i) s.className="on"; d.appendChild(s) } return d }
+  function render(){
+    box.innerHTML="";
+    if(i>=items.length){
+      var h=document.createElement("div"); h.className="q"; h.textContent="You got "+score+" of "+items.length+".";
+      var p=document.createElement("p"); p.textContent=end;
+      var r=document.createElement("button"); r.type="button"; r.className="go"; r.textContent="Go again";
+      r.addEventListener("click",function(){i=0;score=0;render()});
+      box.appendChild(dots()); box.appendChild(h); box.appendChild(p); box.appendChild(r); return;
+    }
+    locked=false;
+    var it=items[i];
+    var q=document.createElement("div"); q.className="q"; q.textContent=it.q;
+    var ch=document.createElement("div"); ch.className="ch "+cls;
+    var out=document.createElement("div"); out.className="out";
+    tiers.forEach(function(t,k){
+      var b=document.createElement("button"); b.type="button"; b.textContent=t;
+      b.addEventListener("click",function(){
+        if(locked) return; locked=true;
+        var ok=(k===it.a); if(ok) score++;
+        $$("button",ch).forEach(function(x,j){ x.disabled=true; if(j===it.a) x.classList.add("right"); else if(j===k) x.classList.add("wrong") });
+        var v=document.createElement("p"); v.textContent=(ok?"Right. ":"Not quite. ")+it.why; out.appendChild(v);
+        var nx=document.createElement("button"); nx.type="button"; nx.className="go";
+        nx.textContent=(i===items.length-1?"See score":"Next");
+        nx.addEventListener("click",function(){i++;render()});
+        out.appendChild(nx); nx.focus({preventScroll:true});
+      });
+      ch.appendChild(b);
+    });
+    box.appendChild(dots()); box.appendChild(q); box.appendChild(ch); box.appendChild(out);
+  }
+  render();
+}
+
+buildQuiz($("#sortBox"),[
+  {q:"Flashing “BUY POPCORN” at an audience",a:1,why:"Nonsignificant effects, or weak and irreplicable ones."},
+  {q:"Flashing “DRINK COKE” at an audience",a:1,why:"Same result. Direct consumer instructions are what the review singles out as failing."},
+  {q:"Flashing “WRITE MORE” at people in a lab",a:1,why:"Mixed results, and the studies had serious problems with how they were run."},
+  {q:"A cue tied to a basic drive, like thirst or hunger",a:0,why:"This worked. Almost every study that got a strong, repeatable result was doing something like this."},
+  {q:"A cue tied to an emotion",a:0,why:"Also worked. Feeling-based hints are the category that held up."},
+  {q:"A lexical prime, a word making related words easier to reach",a:0,why:"Worked. Grouped with the indirect methods. Real, but small."}
+],["It worked","It failed"],"c2",
+"Notice the pattern. Everything that gave an order failed. Everything that worked sideways, through a need or a feeling, held up.");
+
+if($("#claimBox")) buildQuiz($("#claimBox"),[
+  {q:"Flashing “buy popcorn” at people reliably sells popcorn.",a:2,why:"The review reports these produced either nonsignificant effects or weak, irreplicable ones."},
+  {q:"Subliminal stimuli can influence affect, cognition and behavior.",a:0,why:"Yes, but with conditions. Certain kinds of message, in certain situations, across hundreds of experiments."},
+  {q:"It works the same way on everyone.",a:2,why:"No. The same message lands differently on different people, and personality is part of why."},
+  {q:"A real political campaign was accused of using this.",a:0,why:"September 2000, a Bush ad showing Al Gore while pieces of “bureaucrats” and “democrats” flashed repeatedly."},
+  {q:"A brand can become part of someone's personality.",a:0,why:"My source says it directly. People express themselves through a brand, and it becomes part of their personality."},
+  {q:"A clothing brand's visible logo is subliminal messaging.",a:2,why:"Subliminal means you never knew. A logo you look at is supraliminal. This is the weakest claim in my project, and I drop it."},
+  {q:"Streetwear communities form through the mechanisms this research describes.",a:1,why:"No source here studies clothing or social media. This is me reasoning from brand-as-identity and indirect cues, and I say so."}
+],["My sources support it","My argument, untested","My sources contradict it"],"c3",
+"The research backs a narrow, conditional effect plus a strong claim about brands and identity. It does not back calling visible branding subliminal. That gap is my argument, and it is labelled as one throughout.");
+
+/* ad */
+(function(){
+  var word=$("#adWord"), go=$("#adGo"), count=$("#adCount");
+  var F=["BUREAU","RATS","DEMO","CRATS","BUREAU","CRATS","RATS","DEMO"], running=false;
+  go.addEventListener("click",function(){
+    if(running) return; running=true; go.disabled=true; count.textContent="Playing";
+    var i=0;
+    (function step(){
+      if(i>=F.length){ word.textContent=" "; word.style.opacity=0; count.textContent="A schematic, not real footage"; running=false; go.disabled=false; go.textContent="Play again"; return }
+      word.textContent=F[i]; word.style.opacity=1;
+      setTimeout(function(){ word.style.opacity=0; setTimeout(function(){ i++; step() },220) },120);
+    })();
+  });
+})();
+
+/* h4nsmade: my own brand's numbers */
+(function(){
+  var NS="http://www.w3.org/2000/svg";
+  function mk(tag,at,par){ var e=document.createElementNS(NS,tag); for(var k in at) e.setAttribute(k,at[k]); if(par) par.appendChild(e); return e }
+  function fmt(v,dec){ return dec?v.toFixed(dec):Math.round(v).toLocaleString("en-US") }
+  function ease(t){ return 1-Math.pow(1-t,3) }
+  function seen(node,fn,th){
+    if(!node) return;
+    if(reduce||!("IntersectionObserver" in window)){ fn(); return }
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.disconnect(); fn() } }) },{threshold:th||.3});
+    io.observe(node);
+  }
+
+  /* running numbers */
+  $$("[data-to]").forEach(function(n){
+    var to=+n.getAttribute("data-to"), dec=+(n.getAttribute("data-dec")||0), pre=n.getAttribute("data-pre")||"", suf=n.getAttribute("data-suf")||"";
+    if(reduce) return;
+    n.textContent=pre+fmt(0,dec)+suf;
+    seen(n,function(){
+      var t0=performance.now();
+      (function f(now){ var p=Math.min(1,Math.max(0,(now-t0)/1700)); n.textContent=pre+fmt(to*ease(p),dec)+suf; if(p<1) requestAnimationFrame(f) })(t0);
+    },.6);
+  });
+
+  /* stat line: daily views + orders */
+  var VIEWS=[1909,1808,822,820,2162,3187,2146,2613,1800,1296,2973,2770,995,2627,2324,456,4228,2958,3728,3374,1141,2377,514,3657,2652,315,152,2729,2400,582];
+  var ORD=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,4,2,1,0,1,1,1,0,1,0,0,1];
+  var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function lab(i){ var d=new Date(2026,9,19+i); return MON[d.getMonth()]+" "+d.getDate() }
+  var svg=$("#hbLine"), lread=$("#hbLineRead"), DROP=17, played=reduce, parts=null;
+  function hide(){
+    var p=parts, len=p.path.getTotalLength();
+    p.path.style.transition="none"; p.path.style.strokeDasharray=len; p.path.style.strokeDashoffset=len;
+    p.bars.forEach(function(b){ b.style.transition="none"; b.style.transform="scaleY(0)" });
+    p.dots.concat([p.cur,p.dot]).forEach(function(x){ x.style.transition="none"; x.style.opacity=0 });
+  }
+  function play(){
+    played=true; var p=parts; if(!p) return;
+    p.path.getBoundingClientRect();
+    p.path.style.transition="stroke-dashoffset 2.6s cubic-bezier(.25,.1,.25,1)"; p.path.style.strokeDashoffset=0;
+    p.bars.forEach(function(b,k){ b.style.transition="transform .7s cubic-bezier(.2,.7,.2,1) "+(1.6+k*.09)+"s"; b.style.transform="scaleY(1)" });
+    p.dots.forEach(function(x,k){ x.style.transition="opacity .4s ease "+(k*2.4/VIEWS.length).toFixed(2)+"s"; x.style.opacity=1 });
+    [p.cur,p.dot].forEach(function(x){ x.style.transition="opacity .5s ease 2.5s"; x.style.opacity=1 });
+  }
+  function drawLine(){
+    if(!svg) return;
+    var W=Math.max(280,svg.getBoundingClientRect().width||900), H=W<560?270:340;
+    svg.setAttribute("viewBox","0 0 "+W+" "+H); svg.style.height=H+"px";
+    while(svg.firstChild) svg.removeChild(svg.firstChild);
+    var L=W<560?30:40, R=W-18, T=40, B=H-112, OT=H-84, OB=H-34, n=VIEWS.length, MAX=4500, i, f="#5a5a5e";
+    function X(k){ return L+(R-L)*k/(n-1) }
+    function Y(v){ return B-(B-T)*v/MAX }
+    [0,2000,4000].forEach(function(v){
+      mk("line",{x1:L,x2:R,y1:Y(v),y2:Y(v),stroke:"rgba(255,255,255,.08)"},svg);
+      mk("text",{x:L-8,y:Y(v)+4,"text-anchor":"end",fill:f,"font-size":11},svg).textContent=v?(v/1000)+"k":"0";
+    });
+    mk("text",{x:L,y:T-20,fill:f,"font-size":11},svg).textContent="views";
+    mk("text",{x:L,y:OT-8,fill:f,"font-size":11},svg).textContent="orders";
+    mk("line",{x1:L,x2:R,y1:OB,y2:OB,stroke:"rgba(255,255,255,.14)"},svg);
+    for(i=0;i<n;i+=7) mk("text",{x:X(i),y:H-12,"text-anchor":i?"middle":"start",fill:f,"font-size":11},svg).textContent=lab(i);
+    var dx=X(DROP);
+    mk("line",{x1:dx,x2:dx,y1:T-12,y2:OB,stroke:"rgba(255,255,255,.3)","stroke-dasharray":"3 4"},svg);
+    mk("text",{x:dx+7,y:T-20,fill:"#f5f5f7","font-size":11,"font-weight":600},svg).textContent="drop · nov 5, 7pm";
+    var d=""; for(i=0;i<n;i++) d+=(i?"L":"M")+X(i).toFixed(1)+" "+Y(VIEWS[i]).toFixed(1);
+    var path=mk("path",{d:d,fill:"none","stroke-width":1.75,"stroke-linejoin":"round","stroke-linecap":"round"},svg);
+    path.style.stroke="var(--accent)";
+    var dots=[]; for(i=0;i<n;i++){ var c=mk("circle",{cx:X(i),cy:Y(VIEWS[i]),r:2},svg); c.style.fill="var(--accent)"; dots.push(c) }
+    var bars=[], bw=Math.max(3,Math.min(8,(R-L)/n*.45));
+    for(i=0;i<n;i++){ if(!ORD[i]) continue; var h=(OB-OT)*ORD[i]/10; var r=mk("rect",{x:X(i)-bw/2,y:OB-h,width:bw,height:h,rx:1.5},svg); r.style.fill="var(--accent)"; r.style.transformBox="fill-box"; r.style.transformOrigin="50% 100%"; bars.push(r) }
+    var cur=mk("line",{y1:T-12,y2:OB,stroke:"rgba(255,255,255,.55)"},svg), dot=mk("circle",{r:4.5,fill:"#fff"},svg);
+    function show(k){
+      cur.setAttribute("x1",X(k)); cur.setAttribute("x2",X(k)); dot.setAttribute("cx",X(k)); dot.setAttribute("cy",Y(VIEWS[k]));
+      lread.innerHTML=lab(k)+" &nbsp;·&nbsp; <b>"+VIEWS[k].toLocaleString("en-US")+"</b> views &nbsp;·&nbsp; <b>"+ORD[k]+"</b> "+(ORD[k]===1?"order":"orders");
+    }
+    svg.onpointermove=function(e){ var rc=svg.getBoundingClientRect(); show(clamp(Math.round((e.clientX-rc.left-L)/(R-L)*(n-1)),0,n-1)) };
+    svg.onpointerdown=svg.onpointermove;
+    svg.onpointerleave=function(){ show(DROP) };
+    show(DROP);
+    parts={path:path,bars:bars,dots:dots,cur:cur,dot:dot};
+    if(!played) hide();
+  }
+  if(svg){
+    drawLine();
+    var rzl; window.addEventListener("resize",function(){ clearTimeout(rzl); rzl=setTimeout(drawLine,160) });
+    seen(svg.parentNode,play,.35);
+  }
+
+  /* three-second lines */
+  var REELS=[
+    ["cream + black coming soon",.511,5.8,0,"Oct 20"],["which colorway’s better?",.543,5.0,0,"Oct 20"],["process: the tags",.575,6.6,1,"Oct 21"],
+    ["join sms for early access",.623,4.1,0,"Oct 23"],["join sms for early access :)",.563,5.0,0,"Oct 24"],["black henley on body",.697,3.9,0,"Oct 25"],
+    ["join sms for when these drop",.508,5.5,0,"Oct 25"],["cream henley on body",.62,4.4,0,"Oct 26"],["skit, dropping 11/05",.718,7.4,0,"Oct 28"],
+    ["both colorways dropping 11/5",.6,4.4,0,"Oct 29"],["dropping 11/05, join sms",.642,4.1,0,"Oct 29"],["dropping 11/5 7pm",.686,3.9,0,"Oct 30"],
+    ["dropping 11/5 at 7pm eastern",.634,3.9,0,"Nov 1"],["going live this thursday",.65,6.0,0,"Nov 2"],["dropping tomorrow",.551,4.6,0,"Nov 4"],
+    ["everything i’m dropping today",.552,8.9,0,"Nov 5"],["out now on h4n.co",.619,4.1,0,"Nov 7"],["out now on the website",.609,4.5,0,"Nov 8"],
+    ["henleys i just released",.587,4.1,0,"Nov 9"],["process: the r&d",.628,7.3,1,"Nov 9"],["both colorways out now",.56,4.5,0,"Nov 11"],
+    ["cream or black?",.59,3.9,0,"Nov 12"],["both colorways out now on h4n.co",.564,4.2,0,"Nov 15"],["all orders shipped out",.416,9.6,1,"Nov 16"]
+  ];
+  var rowsBox=$("#hbRows"), sread=$("#hbSkipRead");
+  if(rowsBox){
+    var sdef="Nov 16 &nbsp;·&nbsp; <b>42%</b> swiped &nbsp;·&nbsp; <b>9.6s</b> avg watch";
+    REELS.slice().sort(function(a,b){ return a[1]-b[1] }).forEach(function(r){
+      var row=document.createElement("div"); row.className="hb-row"+(r[3]?" key":"");
+      var nm=document.createElement("span"); nm.className="nm"; nm.textContent=r[0];
+      var tr=document.createElement("span"); tr.className="tr";
+      var st=document.createElement("i"); st.className="st"; st.setAttribute("data-w",((1-r[1])*100).toFixed(1)); tr.appendChild(st);
+      var pc=document.createElement("span"); pc.className="pc"; pc.textContent=Math.round((1-r[1])*100)+"%";
+      row.appendChild(nm); row.appendChild(tr); row.appendChild(pc); rowsBox.appendChild(row);
+      row.addEventListener("pointerenter",function(){ sread.innerHTML=r[4]+" &nbsp;·&nbsp; <b>"+Math.round(r[1]*100)+"%</b> swiped &nbsp;·&nbsp; <b>"+r[2].toFixed(1)+"s</b> avg watch" });
+    });
+    rowsBox.addEventListener("pointerleave",function(){ sread.innerHTML=sdef });
+    sread.innerHTML=sdef;
+    var fillRows=function(){ $$(".st",rowsBox).forEach(function(s,k){ s.style.transitionDelay=(k*.045).toFixed(3)+"s"; s.style.width=s.getAttribute("data-w")+"%" }) };
+    if(reduce) fillRows(); else seen(rowsBox,fillRows,.2);
+  }
+
+  /* funnel lines */
+  var fu=$("#hbFu");
+  if(fu){
+    var fillFu=function(){ $$(".fu-ln i",fu).forEach(function(s,k){ s.style.transitionDelay=(k*.22)+"s"; s.style.width=s.getAttribute("data-w")+"%" }) };
+    if(reduce) fillFu(); else seen(fu,fillFu,.35);
+  }
+
+  /* drop sparklines */
+  $$(".hb-drop svg[data-spark]").forEach(function(s){
+    var v=s.getAttribute("data-spark").split(",").map(Number), MAX=1500, DOT=+(s.getAttribute("data-dot")||2), w=Math.max(160,s.getBoundingClientRect().width||260), h=58, n=v.length;
+    s.setAttribute("viewBox","0 0 "+w+" "+h);
+    function X(i){ return 5+(w-10)*i/(n-1) }
+    function Y(x){ return h-5-(h-12)*x/MAX }
+    mk("line",{x1:0,x2:w,y1:h-5,y2:h-5,stroke:"rgba(255,255,255,.1)"},s);
+    var d=""; v.forEach(function(x,i){ d+=(i?"L":"M")+X(i).toFixed(1)+" "+Y(x).toFixed(1) });
+    var p=mk("path",{d:d,fill:"none","stroke-width":1.75,"stroke-linejoin":"round","stroke-linecap":"round"},s); p.style.stroke="var(--accent)";
+    var c=mk("circle",{cx:X(Math.max(0,DOT)),cy:Y(v[Math.max(0,DOT)]),r:3.5},s); c.style.fill="var(--accent)"; if(DOT<0) c.setAttribute("r",0);
+    if(reduce) return;
+    var len=p.getTotalLength(); p.style.strokeDasharray=len; p.style.strokeDashoffset=len; c.style.opacity=0;
+    seen(s,function(){ p.getBoundingClientRect(); p.style.transition="stroke-dashoffset 1.6s cubic-bezier(.25,.1,.25,1)"; p.style.strokeDashoffset=0; c.style.transition="opacity .4s ease .9s"; c.style.opacity=1 },.5);
+  });
+})();
+
+/* draft mode: switched off for the final version */
+(function(){ return;
+  var SEL="h1,h2,h3,p,.kick,.page,.t,.k,.see,.says,.h,.l,.s,.n,.v,.cred,.mcap,.fn span,.mine .who,.oq b,.tac b,.qlist b,.cue span";
+  var SKIP=".quiz,.note,.stage,.adScreen,.mhead,.mkey,.mlab,.nav,.notes,.etool,.edump";
+  var KEY="sm-draft-v1", KEY2="sm-draft-v2";
+  var main=document.querySelector("main"); if(!main) return;
+
+  var nodes=Array.prototype.slice.call(main.querySelectorAll(SEL)).filter(function(el){
+    return !el.closest(SKIP) && !el.querySelector(SEL);
+  });
+  var orig={}, keyOf=new Map(), bySec={}, nodeByKey={};
+  nodes.forEach(function(el,i){
+    var sec=el.closest("[data-title]");
+    var title=sec?sec.getAttribute("data-title"):"page";
+    bySec[title]=(bySec[title]||0)+1;
+    var k=title+"#"+bySec[title];
+    el.setAttribute("data-ed",k);
+    keyOf.set(el,k);
+    nodeByKey[k]=el;
+    orig[k]=el.innerHTML.trim();
+    (bySec._order=bySec._order||[]);
+  });
+
+  function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;") }
+  function load(){
+    try{ var d=localStorage.getItem(KEY2); if(d) return JSON.parse(d) }catch(e){}
+    var out={};
+    try{
+      var old=JSON.parse(localStorage.getItem(KEY)||"{}");
+      for(var k in old){ if(!nodeByKey[k]) continue; if(old[k]!==nodeByKey[k].textContent.trim()) out[k]=esc(old[k]) }
+    }catch(e){}
+    return out;
+  }
+  function save(d){ try{ localStorage.setItem(KEY2,JSON.stringify(d)); var b={}; for(var k in d) b[k]=orig[k]; localStorage.setItem(BKEY,JSON.stringify(b)) }catch(e){} }
+  var BKEY="sm-draft-base", draft=load(), base={};
+  try{ base=JSON.parse(localStorage.getItem(BKEY)||"{}") }catch(e){}
+  /* an edit only applies to the text it was made on; if the page changed underneath it, drop it */
+  for(var dk in draft){
+    if(orig[dk]==null){ delete draft[dk]; continue }
+    if(base[dk]!=null ? base[dk]!==orig[dk] : dk.indexOf("References#")===0) delete draft[dk];
+  }
+  save(draft);
+
+  function applySaved(){
+    nodes.forEach(function(el){
+      var k=keyOf.get(el);
+      if(draft[k]!=null && draft[k]!==orig[k]){ el.innerHTML=draft[k]; el.classList.add("changed") }
+    });
+    count();
+  }
+  function count(){
+    var n=0; for(var k in draft){ if(draft[k]!==orig[k]) n++ }
+    var c=document.getElementById("eCount"); if(c) c.textContent=n;
+    return n;
+  }
+
+  var editing=false, btn=document.getElementById("editBtn");
+  function setEdit(on){
+    editing=on;
+    document.body.classList.toggle("edit-on",on);
+    document.documentElement.classList.toggle("editing",on);
+    btn.setAttribute("aria-pressed",String(on));
+    btn.textContent=on?"Editing":"Edit";
+    if(!on) closeLink();
+    refresh();
+    nodes.forEach(function(el){
+      if(on){ el.setAttribute("contenteditable","true"); el.setAttribute("spellcheck","true") }
+      else el.removeAttribute("contenteditable");
+    });
+  }
+  btn.addEventListener("click",function(){ setEdit(!editing) });
+
+  var t=null;
+  main.addEventListener("input",function(e){
+    var el=e.target.closest("[data-ed]"); if(!el) return;
+    var k=el.getAttribute("data-ed");
+    draft[k]=el.innerHTML.trim();
+    el.classList.toggle("changed", draft[k]!==orig[k]);
+    clearTimeout(t); t=setTimeout(function(){ save(draft); count() },350);
+  });
+  main.addEventListener("keydown",function(e){
+    if(e.key==="Enter" && !e.shiftKey && e.target.closest("[data-ed]")){ e.preventDefault(); document.execCommand("insertLineBreak") }
+  });
+
+  document.getElementById("eReset").addEventListener("click",function(){
+    draft={}; save(draft);
+    nodes.forEach(function(el){ el.innerHTML=orig[keyOf.get(el)]; el.classList.remove("changed") });
+    count();
+  });
+  document.getElementById("eDone").addEventListener("click",function(){ setEdit(false) });
+
+  function report(){
+    var out=[], lastSec=null;
+    nodes.forEach(function(el){
+      var k=el.getAttribute("data-ed");
+      if(draft[k]==null || draft[k]===orig[k]) return;
+      var sec=k.split("#")[0];
+      if(sec!==lastSec){ out.push("\n=== "+sec.toUpperCase()+" ==="); lastSec=sec }
+      out.push("WAS: "+tidy(orig[k]));
+      out.push("NOW: "+tidy(draft[k]));
+      out.push("");
+    });
+    return out.length? ("MY EDITS\n"+out.join("\n")) : "No edits yet.";
+  }
+  var dump=document.getElementById("edump"), ta=document.getElementById("eText");
+  document.getElementById("eCopy").addEventListener("click",function(){
+    var txt=report();
+    ta.value=txt; dump.classList.add("on");
+    try{ navigator.clipboard.writeText(txt).then(function(){
+      var b=document.getElementById("eCopy"); b.textContent="Copied"; setTimeout(function(){b.textContent="Copy my edits"},1400);
+    }).catch(function(){ ta.select() }) }catch(e){ ta.select() }
+  });
+  document.getElementById("eClose").addEventListener("click",function(){ dump.classList.remove("on") });
+
+  function tidy(h){ return h.replace(/<b>/g,"<strong>").replace(/<\/b>/g,"</strong>").replace(/\s+/g," ").trim() }
+
+  /* formatting toolbar */
+  var fbar=document.getElementById("fbar"), fLink=document.getElementById("fLink"), saved=null;
+  try{ document.execCommand("styleWithCSS",false,false) }catch(e){}
+  function anchorEl(){ var s=window.getSelection(); if(!s||!s.rangeCount) return null; var n=s.anchorNode; if(n&&n.nodeType===3) n=n.parentNode; return (n&&n.closest)?n:null }
+  function edHost(){ var n=anchorEl(); return n?n.closest("[data-ed]"):null }
+  function inAccent(){ var n=anchorEl(), h=edHost(); var em=n?n.closest("em"):null; return (em&&h&&h.contains(em))?em:null }
+  function inLink(){ var n=anchorEl(); return n?n.closest("a"):null }
+  function unwrap(el){ var p=el.parentNode; while(el.firstChild) p.insertBefore(el.firstChild,el); p.removeChild(el) }
+  function toggleAccent(host){
+    var em=inAccent(); if(em){ unwrap(em); return }
+    var s=window.getSelection(); if(s.isCollapsed) return;
+    var r=s.getRangeAt(0); if(!host.contains(r.commonAncestorContainer)) return;
+    var w=document.createElement("em");
+    try{ r.surroundContents(w) }catch(err){ w.appendChild(r.extractContents()); r.insertNode(w) }
+    s.removeAllRanges(); var nr=document.createRange(); nr.selectNodeContents(w); s.addRange(nr);
+  }
+  function refresh(){
+    var host=editing?edHost():null;
+    $$("button[data-cmd]",fbar).forEach(function(b){
+      var c=b.getAttribute("data-cmd");
+      b.disabled=!host && c!=="undo" && c!=="redo";
+      if(!b.hasAttribute("aria-pressed")) return;
+      var on=false;
+      if(host){ if(c==="accent") on=!!inAccent(); else { try{ on=document.queryCommandState(c) }catch(e){} } }
+      b.setAttribute("aria-pressed",String(on));
+    });
+  }
+  function closeLink(){ fbar.classList.remove("linking") }
+  function restore(){ if(saved){ var s=window.getSelection(); s.removeAllRanges(); s.addRange(saved) } }
+  function applyLink(){
+    var url=fLink.value.trim(); closeLink(); restore();
+    var host=edHost(); if(!host){ saved=null; return }
+    if(url){ if(!/^(https?:|mailto:|#)/i.test(url)) url="https://"+url; document.execCommand("createLink",false,url) }
+    host.dispatchEvent(new Event("input",{bubbles:true})); saved=null; refresh();
+  }
+  fbar.addEventListener("mousedown",function(e){ if(e.target.closest("button")) e.preventDefault() });
+  fbar.addEventListener("click",function(e){
+    var b=e.target.closest("button[data-cmd]"); if(!b) return;
+    var c=b.getAttribute("data-cmd"), host=edHost();
+    if(c==="undo"||c==="redo"){ document.execCommand(c); refresh(); return }
+    if(!host) return;
+    if(c==="accent") toggleAccent(host);
+    else if(c==="link"){
+      var s=window.getSelection(); if(s.isCollapsed) return;
+      saved=s.getRangeAt(0).cloneRange(); var a=inLink();
+      fLink.value=a?a.getAttribute("href"):""; fbar.classList.add("linking"); fLink.focus(); return;
+    }
+    else if(c==="removeFormat"){ document.execCommand("removeFormat"); var em=inAccent(); if(em) unwrap(em) }
+    else document.execCommand(c);
+    host.dispatchEvent(new Event("input",{bubbles:true}));
+    refresh();
+  });
+  document.getElementById("fLinkOk").addEventListener("click",applyLink);
+  document.getElementById("fLinkX").addEventListener("click",function(){ closeLink(); restore(); saved=null });
+  fLink.addEventListener("keydown",function(e){
+    if(e.key==="Enter"){ e.preventDefault(); applyLink() }
+    else if(e.key==="Escape"){ e.preventDefault(); closeLink(); restore(); saved=null }
+  });
+  document.addEventListener("selectionchange",function(){ if(editing) refresh() });
+  main.addEventListener("paste",function(e){
+    var t=e.target; if(t&&t.nodeType===3) t=t.parentNode;
+    if(!editing||!t||!t.closest||!t.closest("[data-ed]")) return;
+    e.preventDefault();
+    var txt=(e.clipboardData||window.clipboardData).getData("text/plain").replace(/\r?\n+/g," ");
+    document.execCommand("insertText",false,txt);
+  });
+  refresh();
+
+  applySaved();
+})();
+
+})();
+</script>
+</body>
+</html>
