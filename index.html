@@ -327,6 +327,7 @@ main [data-ed] s,main [data-ed] strike{text-decoration:line-through}
     <a href="#p-ethics">Ethics &amp; Next Steps</a>
     <a href="#p-refs">References</a>
   </div>
+  <button class="nbtn" id="fsBtn" aria-pressed="false" title="Full screen (F)">Full screen</button>
   <div class="bartrack"></div>
   <div class="bar" id="bar"></div>
 </nav>
@@ -803,6 +804,19 @@ var sio=new IntersectionObserver(function(es){
 secs.forEach(function(s){sio.observe(s)});
 
 var blackEl=$("#black");
+var fsBtn=$("#fsBtn"), fsOK=!!(document.fullscreenEnabled||document.webkitFullscreenEnabled);
+function fsEl(){ return document.fullscreenElement||document.webkitFullscreenElement }
+function toggleFS(){
+  if(!fsOK) return;
+  var d=document.documentElement;
+  if(fsEl()){ (document.exitFullscreen||document.webkitExitFullscreen).call(document) }
+  else{ var p=(d.requestFullscreen||d.webkitRequestFullscreen).call(d); if(p&&p.catch) p.catch(function(){}) }
+}
+function fsSync(){ var on=!!fsEl(); fsBtn.setAttribute("aria-pressed",String(on)); fsBtn.textContent=on?"Exit full screen":"Full screen" }
+if(fsBtn){
+  if(!fsOK) fsBtn.style.display="none";
+  else{ fsBtn.addEventListener("click",toggleFS); document.addEventListener("fullscreenchange",fsSync); document.addEventListener("webkitfullscreenchange",fsSync) }
+}
 blackEl.addEventListener("click",function(){blackEl.classList.remove("on")});
 function jump(d){ secs[clamp(cur+d,0,secs.length-1)].scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"}) }
 window.addEventListener("keydown",function(e){
@@ -814,6 +828,7 @@ window.addEventListener("keydown",function(e){
   else if(k==="ArrowLeft"||k==="PageUp"){ e.preventDefault(); jump(-1) }
   else if(k==="Home"){ e.preventDefault(); secs[0].scrollIntoView({behavior:"smooth"}) }
   else if(k==="b"||k==="B"||k==="."){ e.preventDefault(); blackEl.classList.toggle("on") }
+  else if(k==="f"||k==="F"){ e.preventDefault(); toggleFS() }
 });
 window.addEventListener("scroll",function(){
   var h=document.documentElement.scrollHeight-window.innerHeight;
